@@ -1,0 +1,151 @@
+$thin: 'Proxima Nova ScOsf Th';
+$regular: 'Proxima Nova Alt Rg';
+$bold: 'Proxima Nova Lt';
+$titulo: 'Proxima Nova Alt Cn Lt';
+$azulEscuro: #014281;
+
+
+*{
+	font-family: $regular;
+}
+.logotipo{
+	display: block;
+	width: 96px;
+	height: 84px;
+	background-image: url('../img/logotipo.svg');
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	text-indent: -999px;
+	a{
+		display: block;
+		height: 100%;
+	}
+}
+header{
+	height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f1f1;
+	
+	.menu-topo{
+		text-align: right;
+		margin-top: 30px;
+		margin-bottom: 0px;
+		li{
+			display: inline-block;
+			vertical-align: top;
+			margin-left: 60px;
+			a{
+				color: #000000;
+				font-size: 15px;
+				font-family: $titulo;
+				text-transform: uppercase;
+				&:hover, &:focus, &:active{
+					color: $azulEscuro;
+					text-decoration: none;
+				}
+			}
+		}
+	}	
+}
+.banner-principal{
+	height: calc(100vh - 104px);
+	background-size: cover;
+	background-position: center;
+	display: table;
+	width: 100%;
+	> div{
+		display: table-cell;
+		vertical-align: middle;
+		h2{
+			color: #FFFFFF;
+			font-family: $titulo;
+			font-size: 36px;
+		}
+	}
+
+}
+.icones-social{
+	li{
+		display: inline-block;
+		&:last-child{
+			margin-left: 10px;
+		}
+		a{
+			display: block;
+			width: 22px;
+			height: 22px;
+			overflow: hidden;
+			text-indent: -999px;
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			color: transparent !important;
+			&.linkedin{
+				background-image: url('../img/linkedin.svg');
+			}
+			&.facebook{
+				background-image: url('../img/facebook.svg');
+			}
+		}
+	}
+}
+
+footer{
+	border-top: 1px solid #f1f1f1;
+	padding-top: 25px;
+	font-size: 13px;
+	color: #666;
+	.logotipo{
+		position: relative;
+		overflow: initial;
+		&:after{
+			content: '';
+			position: absolute;
+			right: -45px;
+			top: 0;
+			height: 100%;
+			width: 1px;
+			border-right: 1px solid #f1f1f1;
+		}
+	}
+	.texto-footer{
+		font-size: 13px;
+		color: #666;
+		margin-top: 20px;
+		display: block;
+		p{
+			margin-bottom: 0px;
+		}
+	}
+	.social-footer{
+		margin-top: 20px;
+		display: block;
+		font-family: $bold;
+		font-size: 13px;
+		text-align: right;
+		.icones-social{
+			margin-left: 10px;
+			display: inline-block;
+    		vertical-align: middle;
+		}
+	}
+	.certificacoes{
+		display: inline-block;
+		width: 290px;
+		height: 62px;
+		background-image: url('../img/certificacoes.jpg');
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	hr{
+		margin-top: 25px;
+		border-top: 1px solid #f1f1f1;
+	}
+	.copyright{
+		margin-top: 20px;
+	}
+}
