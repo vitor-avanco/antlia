@@ -15,7 +15,7 @@ class Servicos extends Component {
       
     componentDidMount(){  
         $.ajax({
-            url:"http://localhost:8080/wordpress/wp-json/wp/v2/servicos/",
+            url:"http://server.bioage.com.br/app/wordpress/wp-json/wp/v2/servicos/",
             dataType: 'json',
             success:function(resposta){    
               this.setState({listaServicos:resposta});

@@ -149,3 +149,179 @@ footer{
 		margin-top: 20px;
 	}
 }
+
+.lista-de-servicos-produtos{
+	background-color: #f6f6f6;
+	padding: 45px 0px;
+	.item{
+		border: 1px solid #ddd;
+		background-color: #FFF;
+		padding: 25px 15px;
+		text-align: center;
+		height: 337px;
+		a{
+			color: #000000;
+			&:hover{
+				text-decoration: none
+			}
+		}
+		h3{
+			color: #000000;
+			font-family: $titulo;
+			font-size: 20px;
+			margin-top: 20px;
+			height: 48px;
+			overflow: hidden;
+		}
+		span{
+			font-family: $bold;
+		}
+		p{
+			color: #000;
+			font-size: 15px;
+			line-height: 22px;
+			height: 88px;
+			overflow: hidden;
+		}
+		img{
+			width: 80px;
+			height: 80px;
+			margin: auto;
+			display: block;
+		}
+	}
+}
+.lista-de-linguagens{
+	padding: 70px 0px;
+	display: table;
+	width: 100%;
+	.col-sm-6{
+		position: relative;
+
+		h3{
+			max-width: 450px;
+			margin-top: 30%;
+			color: rgba(51,51,51,0.87);	
+			font-size: 30px;
+			line-hezght: 36px;
+		}
+	}
+	.blocos-de-linguagens{
+		.item{
+			display: inline-block;
+			border: 1px solid #ddd;
+			width: 170px;
+			height: 135px;
+			vertical-align: top;
+			margin: 3px;
+			padding: 25px;
+			background-position: center;
+			background-size: 130px;
+			background-repeat: no-repeat;
+		}
+	}
+}
+
+.lista-de-clientes{
+	padding: 70px 0px;
+	display: table;
+	width: 100%;
+	background-color: #f6f6f6;
+	.col-sm-6{
+		position: relative;
+
+		h3{
+			max-width: 450px;
+			margin-top: 18%;
+			color: rgba(51, 51, 51, 0.87);
+			font-size: 30px;
+			line-height: 36px;
+			margin-right: 0px;
+			margin-left: auto;
+		}
+	}
+	.blocos-de-clientes{
+		.item{
+			display: inline-block;
+			border: 1px solid #ddd;
+			width: 170px;
+			height: 135px;
+			vertical-align: top;
+			margin: 3px;
+			padding: 25px;
+			background-position: center;
+			background-size: 100px;
+			background-repeat: no-repeat;
+			background-color: #FFFFFF;
+		}
+	}
+}
+.frase-final-home{
+	background-color: $azulEscuro;
+	color: #FFF;
+	padding: 70px 0px;
+	p{
+		padding: 0 15px;
+		width: 100%;
+		max-width: 850px;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 20px;
+		line-break: 26px;
+	}
+}
+.pagina-institucional{
+	.header-azul{
+		color: #FFF;
+		background-color: $azulEscuro;
+		height: 275px;
+		h1{
+			color: #FFF;
+			font-family: $titulo;
+			padding-top: 70px;
+		}
+	}
+	.border-radius-top{
+		margin: auto;
+		background-color: #FFF;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		padding-top: 35px;
+		margin-top: -100px;
+		.text-introducao{
+			margin: auto
+		}
+	}
+}
+
+.missao-visao-valores{
+	background-color: $azulEscuro;
+	padding: 45px 0px 15px 0px;
+	margin: 30px auto;
+
+	.card{
+		background-color: #FFF;
+		text-align: center;
+		padding: 30px;
+		margin-bottom: 30px;
+		&.valores{
+			height: 332px;
+		}
+		h2{
+			font-family: $titulo;
+			color: $azulEscuro;
+			font-size: 22px;
+		}
+		.texto{
+			margin: auto;
+			margin-top: 0px;
+			color: #333333;	
+			font-size: 16px;
+			line-height: 22px;
+			text-align: center;
+		}
+	}
+}
+.pagina-texto-final{
+	margin: 50px 0px;
+}

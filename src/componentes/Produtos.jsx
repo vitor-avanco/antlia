@@ -15,7 +15,7 @@ class Produtos extends Component {
       
     componentDidMount(){  
         $.ajax({
-            url:"http://localhost:8080/wordpress/wp-json/wp/v2/produtos/",
+            url:"http://server.bioage.com.br/app/wordpress/wp-json/wp/v2/produtos/",
             dataType: 'json',
             success:function(resposta){    
               this.setState({listaProdutos:resposta});

@@ -1,2 +1,262 @@
-*{font-family:"Proxima Nova Alt Rg"}.logotipo{display:block;width:96px;height:84px;background-image:url("../img/logotipo.svg");background-position:center;background-size:contain;background-repeat:no-repeat;overflow:hidden;text-indent:-999px}.logotipo a{display:block;height:100%}header{height:auto;padding-top:10px;padding-bottom:10px;border-bottom:1px solid #f1f1f1}header .menu-topo{text-align:right;margin-top:30px;margin-bottom:0px}header .menu-topo li{display:inline-block;vertical-align:top;margin-left:60px}header .menu-topo li a{color:#000000;font-size:15px;font-family:"Proxima Nova Alt Cn Lt";text-transform:uppercase}header .menu-topo li a:hover,header .menu-topo li a:focus,header .menu-topo li a:active{color:#014281;text-decoration:none}.banner-principal{height:calc(100vh - 104px);background-size:cover;background-position:center;display:table;width:100%}.banner-principal>div{display:table-cell;vertical-align:middle}.banner-principal>div h2{color:#FFFFFF;font-family:"Proxima Nova Alt Cn Lt";font-size:36px}.icones-social li{display:inline-block}.icones-social li:last-child{margin-left:10px}.icones-social li a{display:block;width:22px;height:22px;overflow:hidden;text-indent:-999px;background-position:center;background-size:contain;background-repeat:no-repeat;color:transparent !important}.icones-social li a.linkedin{background-image:url("../img/linkedin.svg")}.icones-social li a.facebook{background-image:url("../img/facebook.svg")}footer{border-top:1px solid #f1f1f1;padding-top:25px;font-size:13px;color:#666}footer .logotipo{position:relative;overflow:initial}footer .logotipo:after{content:'';position:absolute;right:-45px;top:0;height:100%;width:1px;border-right:1px solid #f1f1f1}footer .texto-footer{font-size:13px;color:#666;margin-top:20px;display:block}footer .texto-footer p{margin-bottom:0px}footer .social-footer{margin-top:20px;display:block;font-family:"Proxima Nova Lt";font-size:13px;text-align:right}footer .social-footer .icones-social{margin-left:10px;display:inline-block;vertical-align:middle}footer .certificacoes{display:inline-block;width:290px;height:62px;background-image:url("../img/certificacoes.jpg");background-position:center;background-size:contain;background-repeat:no-repeat}footer hr{margin-top:25px;border-top:1px solid #f1f1f1}footer .copyright{margin-top:20px}
-/*# sourceMappingURL=style.css.map */
+* {
+  font-family: "Proxima Nova Alt Rg"; }
+
+.logotipo {
+  display: block;
+  width: 96px;
+  height: 84px;
+  background-image: url("../img/logotipo.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  text-indent: -999px; }
+  .logotipo a {
+    display: block;
+    height: 100%; }
+
+header {
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f1f1f1; }
+  header .menu-topo {
+    text-align: right;
+    margin-top: 30px;
+    margin-bottom: 0px; }
+    header .menu-topo li {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 60px; }
+      header .menu-topo li a {
+        color: #000000;
+        font-size: 15px;
+        font-family: "Proxima Nova Alt Cn Lt";
+        text-transform: uppercase; }
+        header .menu-topo li a:hover, header .menu-topo li a:focus, header .menu-topo li a:active {
+          color: #014281;
+          text-decoration: none; }
+
+.banner-principal {
+  height: calc(100vh - 104px);
+  background-size: cover;
+  background-position: center;
+  display: table;
+  width: 100%; }
+  .banner-principal > div {
+    display: table-cell;
+    vertical-align: middle; }
+    .banner-principal > div h2 {
+      color: #FFFFFF;
+      font-family: "Proxima Nova Alt Cn Lt";
+      font-size: 36px; }
+
+.icones-social li {
+  display: inline-block; }
+  .icones-social li:last-child {
+    margin-left: 10px; }
+  .icones-social li a {
+    display: block;
+    width: 22px;
+    height: 22px;
+    overflow: hidden;
+    text-indent: -999px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: transparent !important; }
+    .icones-social li a.linkedin {
+      background-image: url("../img/linkedin.svg"); }
+    .icones-social li a.facebook {
+      background-image: url("../img/facebook.svg"); }
+
+footer {
+  border-top: 1px solid #f1f1f1;
+  padding-top: 25px;
+  font-size: 13px;
+  color: #666; }
+  footer .logotipo {
+    position: relative;
+    overflow: initial; }
+    footer .logotipo:after {
+      content: '';
+      position: absolute;
+      right: -45px;
+      top: 0;
+      height: 100%;
+      width: 1px;
+      border-right: 1px solid #f1f1f1; }
+  footer .texto-footer {
+    font-size: 13px;
+    color: #666;
+    margin-top: 20px;
+    display: block; }
+    footer .texto-footer p {
+      margin-bottom: 0px; }
+  footer .social-footer {
+    margin-top: 20px;
+    display: block;
+    font-family: "Proxima Nova Lt";
+    font-size: 13px;
+    text-align: right; }
+    footer .social-footer .icones-social {
+      margin-left: 10px;
+      display: inline-block;
+      vertical-align: middle; }
+  footer .certificacoes {
+    display: inline-block;
+    width: 290px;
+    height: 62px;
+    background-image: url("../img/certificacoes.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  footer hr {
+    margin-top: 25px;
+    border-top: 1px solid #f1f1f1; }
+  footer .copyright {
+    margin-top: 20px; }
+
+.lista-de-servicos-produtos {
+  background-color: #f6f6f6;
+  padding: 45px 0px; }
+  .lista-de-servicos-produtos .item {
+    border: 1px solid #ddd;
+    background-color: #FFF;
+    padding: 25px 15px;
+    text-align: center;
+    height: 337px; }
+    .lista-de-servicos-produtos .item a {
+      color: #000000; }
+      .lista-de-servicos-produtos .item a:hover {
+        text-decoration: none; }
+    .lista-de-servicos-produtos .item h3 {
+      color: #000000;
+      font-family: "Proxima Nova Alt Cn Lt";
+      font-size: 20px;
+      margin-top: 20px;
+      height: 48px;
+      overflow: hidden; }
+    .lista-de-servicos-produtos .item span {
+      font-family: "Proxima Nova Lt"; }
+    .lista-de-servicos-produtos .item p {
+      color: #000;
+      font-size: 15px;
+      line-height: 22px;
+      height: 88px;
+      overflow: hidden; }
+    .lista-de-servicos-produtos .item img {
+      width: 80px;
+      height: 80px;
+      margin: auto;
+      display: block; }
+
+.lista-de-linguagens {
+  padding: 70px 0px;
+  display: table;
+  width: 100%; }
+  .lista-de-linguagens .col-sm-6 {
+    position: relative; }
+    .lista-de-linguagens .col-sm-6 h3 {
+      max-width: 450px;
+      margin-top: 30%;
+      color: rgba(51, 51, 51, 0.87);
+      font-size: 30px;
+      line-hezght: 36px; }
+  .lista-de-linguagens .blocos-de-linguagens .item {
+    display: inline-block;
+    border: 1px solid #ddd;
+    width: 170px;
+    height: 135px;
+    vertical-align: top;
+    margin: 3px;
+    padding: 25px;
+    background-position: center;
+    background-size: 130px;
+    background-repeat: no-repeat; }
+
+.lista-de-clientes {
+  padding: 70px 0px;
+  display: table;
+  width: 100%;
+  background-color: #f6f6f6; }
+  .lista-de-clientes .col-sm-6 {
+    position: relative; }
+    .lista-de-clientes .col-sm-6 h3 {
+      max-width: 450px;
+      margin-top: 18%;
+      color: rgba(51, 51, 51, 0.87);
+      font-size: 30px;
+      line-height: 36px;
+      margin-right: 0px;
+      margin-left: auto; }
+  .lista-de-clientes .blocos-de-clientes .item {
+    display: inline-block;
+    border: 1px solid #ddd;
+    width: 170px;
+    height: 135px;
+    vertical-align: top;
+    margin: 3px;
+    padding: 25px;
+    background-position: center;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-color: #FFFFFF; }
+
+.frase-final-home {
+  background-color: #014281;
+  color: #FFF;
+  padding: 70px 0px; }
+  .frase-final-home p {
+    padding: 0 15px;
+    width: 100%;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    line-break: 26px; }
+
+.pagina-institucional .header-azul {
+  color: #FFF;
+  background-color: #014281;
+  height: 275px; }
+  .pagina-institucional .header-azul h1 {
+    color: #FFF;
+    font-family: "Proxima Nova Alt Cn Lt";
+    padding-top: 70px; }
+
+.pagina-institucional .border-radius-top {
+  margin: auto;
+  background-color: #FFF;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding-top: 35px;
+  margin-top: -100px; }
+  .pagina-institucional .border-radius-top .text-introducao {
+    margin: auto; }
+
+.missao-visao-valores {
+  background-color: #014281;
+  padding: 45px 0px 15px 0px;
+  margin: 30px auto; }
+  .missao-visao-valores .card {
+    background-color: #FFF;
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 30px; }
+    .missao-visao-valores .card.valores {
+      height: 332px; }
+    .missao-visao-valores .card h2 {
+      font-family: "Proxima Nova Alt Cn Lt";
+      color: #014281;
+      font-size: 22px; }
+    .missao-visao-valores .card .texto {
+      margin: auto;
+      margin-top: 0px;
+      color: #333333;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: center; }
+
+.pagina-texto-final {
+  margin: 50px 0px; }

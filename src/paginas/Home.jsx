@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import DataStore from '../flux/stores/DataStore';
 import MetaTags from 'react-meta-tags';
-
-import Servicos from '../componentes/Servicos';
-
+import {Link} from 'react-router-dom';
+import Destaque from '../componentes/Destaque';
 
 class Linguagens extends Component{
 	render() {
@@ -20,9 +19,7 @@ class Linguagens extends Component{
 								{
 									page.acf.lista_de_linguagens.linguagens.map(function(item,key){
 										return(
-											<div className="item" key={key}>
-												<img src={item.imagem} alt="Linguagens atendidas"/>
-											</div>
+											<div className="item" key={key} style={{backgroundImage: 'url('+item.imagem+')'}}></div>
 										)
 									})
 								}
@@ -47,9 +44,7 @@ class Clientes extends Component{
 								{
 									page.acf.lista_de_clientes.clientes.map(function(item,key){
 										return(
-											<div className="item" key={key}>
-												<img src={item.imagem} alt="Clientes atendidos"/>
-											</div>
+											<div className="item" key={key} style={{backgroundImage: 'url('+item.imagem+')'}}></div>
 										)
 									})
 								}
@@ -117,7 +112,7 @@ class Home extends React.Component {
 		          </MetaTags>
 
             	<BannerPrincipal />
-                <Servicos />
+                <Destaque />
                 <Linguagens />
                 <Clientes />
                 <FraseFinal />
