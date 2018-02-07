@@ -21,13 +21,13 @@
 // ** Configurações do MySQL - Você pode pegar estas informações
 // com o serviço de hospedagem ** //
 /** O nome do banco de dados do WordPress */
-define( 'DB_NAME', 'bioageapp' );
+define( 'DB_NAME', 'antlia' );
 
 /** Usuário do banco de dados MySQL */
-define( 'DB_USER', 'bioageapp' );
+define( 'DB_USER', 'usuario' );
 
 /** Senha do banco de dados MySQL */
-define( 'DB_PASSWORD', 'mudar123' );
+define( 'DB_PASSWORD', 'senha' );
 
 /** Nome do host do MySQL */
 define( 'DB_HOST', 'localhost' );
