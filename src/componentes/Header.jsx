@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import DataStore from '../flux/stores/DataStore.js'
 import {Link} from 'react-router-dom';
 import Social from '../componentes/Social';
+import $ from 'jquery';
+
 
 class Header extends Component {   
     
