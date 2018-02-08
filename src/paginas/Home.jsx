@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import DataStore from '../flux/stores/DataStore';
 import MetaTags from 'react-meta-tags';
-import {Link} from 'react-router-dom';
 import Destaque from '../componentes/Destaque';
+import Typist from 'react-typist';
 
 class Linguagens extends Component{
 	render() {
@@ -92,7 +92,11 @@ class BannerPrincipal extends Component{
 		return(
 			<div className="banner-principal" style={{backgroundImage: 'url('+page.acf.slideshow.imagem+')'}}>
 				<div>
-					<h2 className="text-center" dangerouslySetInnerHTML={createMarkup(page.acf.slideshow.texto)}></h2>
+					<Typist>
+						<h2 className="text-center">
+							{page.acf.slideshow.texto}
+						</h2>
+					</Typist>
 				</div>
 			</div>
 		)

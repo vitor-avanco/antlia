@@ -27,25 +27,43 @@ class ListaVagas extends Component {
             $('.descricao-vaga, .lista-de-vagas .item h3').removeClass('ativo');
             $(this).addClass('ativo');
             $(this).parent().find('.descricao-vaga').addClass('ativo');
+        });
+
+        $(".formulario-vaga .fechar").click(function(){
+            $('.faixa-form').animate({
+                'bottom' : '-100%'
+            },500)
+            $('.formulario-vaga').fadeOut();
+        })
+        $("body").on("click",'.quero-candidatar', function(){
+            let vaga = $(this).attr("data-vaga");
+            $('.formulario-vaga input.nome-da-vaga').val(vaga);
+            $('.faixa-form .nome-vaga').text(vaga);
+            $('.formulario-vaga').fadeIn();
+            $('.faixa-form').animate({
+                'bottom' : '0px'
+            },500)
+        
         })
 
         var drop = $("input.cv");
         drop.on('dragenter', function (e) {
-        $(".drop").css({
-            "border": "4px dashed #09f",
-            "background": "rgba(0, 153, 255, .05)"
-        });
-        $(".cont").css({
-            "color": "#09f"
-        });
+            $(".drop").css({
+                "border": "4px dashed #09f",
+                "background": "rgba(0, 153, 255, .05)"
+            });
+            
+            $(".cont").css({
+                "color": "#09f"
+            });
         }).on('dragleave dragend mouseout drop', function (e) {
-        $(".drop").css({
-            "border": "3px dashed #DADFE3",
-            "background": "transparent"
-        });
-        $(".cont").css({
-            "color": "#8E99A5"
-        });
+            $(".drop").css({
+                "border": "3px dashed #DADFE3",
+                "background": "transparent"
+            });
+            $(".cont").css({
+                "color": "#8E99A5"
+            });
         });
 
 
@@ -55,9 +73,6 @@ class ListaVagas extends Component {
 
         // Loop through the FileList and render image files as thumbnails.
         for (var i = 0, f; f = files[i]; i++) {
-
-           
-
             var reader = new FileReader();
 
             // Closure to capture the file information.
@@ -88,7 +103,7 @@ class ListaVagas extends Component {
                                 <div className="item" key={key}>
                                         <h3>{item.title.rendered}</h3>
                                         <div className="descricao-vaga" dangerouslySetInnerHTML={{__html:item.acf.descricao_da_vaga}}></div>
-                                        <span className='quero-candidatar'>Quero me candidatar</span>
+                                        <span className='quero-candidatar' data-vaga={item.title.rendered}>Quero me candidatar</span>
                                 </div>
                             )
                         })
@@ -114,7 +129,6 @@ class Vagas extends Component {
 		            <meta id="meta-description" name="description" content="Some description." />
 		            <meta id="og-title" property="og:title" content={page.title.rendered} />
 		            <meta id="og-image" property="og:image" content="path/to/image.jpg" />
-                    <script src="/antlia.js"></script>
 	          	</MetaTags>
                 <div className="pagina-institucional pagina-vagas">
                     <div className="header-azul">
@@ -143,6 +157,7 @@ class Vagas extends Component {
                     <div className="faixa-form">
                         <div className="container"> 
                             <form className="formulario">
+                                <div className="fechar">X</div>
                                 <h3>
                                     Envie seu currículo para a vaga: <span className="nome-vaga">Vaga de Teste</span>
                                 </h3>
@@ -152,6 +167,7 @@ class Vagas extends Component {
                                             <div className="col-sm-12">
                                                 <div className="row">
                                                     <div className="col-sm-6">
+                                                        <input type="hidden" name="vaga" className="nome-da-vaga"  />
                                                         <input type="text" name="nome" placeholder="Digite seu nome" className="form-input" required />   
                                                     </div>
                                                     <div className="col-sm-6">
@@ -175,7 +191,7 @@ class Vagas extends Component {
                                     <div className="col-sm-6">
                                     <div className="drop">
                                         <div className="cont">
-                                        <img src={iconeUpload} />
+                                        <img src={iconeUpload} alt="Upload CV"/>
                                         <div className="tit">
                                            Envie seu currículo
                                         </div>

@@ -49,7 +49,10 @@ header {
     .banner-principal > div h2 {
       color: #FFFFFF;
       font-family: "Proxima Nova Alt Cn Lt";
-      font-size: 36px; }
+      font-size: 36px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto; }
 
 .icones-social li {
   display: inline-block; }
@@ -344,17 +347,31 @@ footer {
   left: 0px;
   width: 100%;
   height: 100%;
-  z-index: 99; }
+  z-index: 99;
+  display: none; }
   .formulario-vaga .faixa-form {
     width: 100%;
     background: #014281;
     padding: 30px 0px;
     position: fixed;
-    bottom: 0px;
+    bottom: -100%;
     left: 0px; }
   .formulario-vaga form {
     max-width: 800px;
-    margin: auto; }
+    margin: auto;
+    position: relative; }
+    .formulario-vaga form .fechar {
+      color: #FFF;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      width: 25px;
+      line-height: 21px;
+      border: 2px solid #FFF;
+      border-radius: 100%;
+      position: absolute;
+      right: 0px;
+      cursor: pointer; }
     .formulario-vaga form h3 {
       text-align: center;
       font-size: 22px;
@@ -390,7 +407,7 @@ footer {
   width: 96%;
   height: 110px;
   border: 2px dashed #014281;
-  border-radius: 15px;
+  border-radius: 5px;
   overflow: hidden;
   text-align: center;
   background: #f6f6f6 !important;
@@ -469,3 +486,42 @@ footer {
 .divisor {
   width: 100%;
   display: table; }
+
+.pagina-contato .header-mapa {
+  position: relative;
+  color: #333333; }
+
+.pagina-contato .border-radius-top.container {
+  position: relative;
+  z-index: 9; }
+  .pagina-contato .border-radius-top.container h1 {
+    color: #333;
+    font-family: "Proxima Nova Alt Cn Lt"; }
+
+.pagina-contato .endereco-contato .endereco {
+  margin-top: 35px; }
+
+.pagina-contato .endereco-contato .telefones, .pagina-contato .endereco-contato .email {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 15px;
+  margin-bottom: 35px; }
+
+.pagina-contato .endereco-contato .telefones {
+  margin-right: 15px; }
+
+.pagina-contato .endereco-contato .email {
+  margin-left: 15px; }
+
+#chatbot {
+  margin: auto;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  #chatbot h2 {
+    text-align: center;
+    color: #014281;
+    font-size: 30px;
+    font-family: "Proxima Nova Alt Rg"; }
+    #chatbot h2 strong {
+      font-family: "Proxima Nova Lt"; }

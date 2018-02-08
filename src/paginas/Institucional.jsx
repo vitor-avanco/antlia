@@ -12,7 +12,7 @@ class Institucional extends Component {
         return (
             <div>
                 <h1>{page.title.rendered}</h1>
-                SAHUUHAS
+                SAsHUUHAS
             </div>
         );
     }

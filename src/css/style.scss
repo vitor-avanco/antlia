@@ -61,8 +61,11 @@ header{
 		vertical-align: middle;
 		h2{
 			color: #FFFFFF;
-			font-family: $titulo;
+			font-family: "Proxima Nova Alt Cn Lt";
 			font-size: 36px;
+			max-width: 500px;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 
@@ -406,17 +409,33 @@ footer{
 	width: 100%;
 	height: 100%;
 	z-index: 99;
+	display: none;
 	.faixa-form{
 		width: 100%;
 		background: $azulEscuro;
 		padding: 30px 0px;
 		position: fixed;
-		bottom: 0px;
+		bottom: -100%;
 		left: 0px;
 	}
 	form{
 		max-width: 800px;
 		margin: auto;
+		position: relative;
+		.fechar{
+			color: #FFF;
+			text-align: center;
+			font-size: 12px;
+			font-weight: 600;
+			width: 25px;
+			line-height: 21px;
+			border: 2px solid #FFF;
+			border-radius: 100%;
+			position: absolute;
+			right: 0px;
+			cursor: pointer;
+
+		}
 		h3{
 			text-align: center;
 			font-size: 22px;
@@ -461,7 +480,7 @@ footer{
 	width: 96%;
 	height: 110px;
 	border: 2px dashed $azulEscuro;
-	border-radius: 15px;
+	border-radius: 5px;
 	overflow: hidden;
 	text-align: center;
 	background: #f6f6f6 !important;
@@ -542,3 +561,54 @@ footer{
   }
 .divisor{width: 100%;
 display: table;}
+
+
+.pagina-contato{
+	.header-mapa{
+		position: relative;
+		color: #333333;
+	}
+	.border-radius-top.container{
+		position: relative;
+		z-index: 9;
+
+		h1{
+			color: #333;
+			font-family: $titulo;
+		}
+	}
+	.endereco-contato{
+		.endereco{
+			margin-top: 35px;
+		}
+		.telefones, .email{
+			display: inline-block;
+			vertical-align: top;
+			margin-top: 15px;
+			margin-bottom: 35px;
+		}
+		.telefones{
+			margin-right: 15px;
+		}
+		.email{
+			margin-left: 15px;
+		}
+	}
+}
+
+#chatbot{
+	
+	margin: auto;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	h2{
+		text-align: center;
+		color: $azulEscuro;
+		font-size: 30px;
+		font-family: $regular;
+		strong{
+			font-family: $bold;
+		}
+	}
+}
