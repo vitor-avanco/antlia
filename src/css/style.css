@@ -142,9 +142,9 @@ footer {
       overflow: hidden; }
     .lista-de-servicos-produtos .item span {
       font-family: "Proxima Nova Lt"; }
-    .lista-de-servicos-produtos .item p {
+    .lista-de-servicos-produtos .item .resumo, .lista-de-servicos-produtos .item p {
       color: #000;
-      font-size: 15px;
+      font-size: 14px;
       line-height: 22px;
       height: 88px;
       overflow: hidden; }
@@ -513,6 +513,27 @@ footer {
 .pagina-contato .endereco-contato .email {
   margin-left: 15px; }
 
+.bg-cinza {
+  margin: 50px 0px;
+  padding: 50px 0px;
+  background: #f6f6f6; }
+
+.pagina-produtos-servicos {
+  padding-bottom: 60px; }
+  .pagina-produtos-servicos .bg-cinza h2 {
+    font-family: "Proxima Nova Alt Cn Lt";
+    font-size: 30px;
+    text-align: left;
+    margin-top: 20%; }
+  .pagina-produtos-servicos .bg-cinza .lista-de-servicos {
+    margin-top: 0px; }
+  .pagina-produtos-servicos h2 {
+    font-family: "Proxima Nova Alt Cn Lt";
+    font-size: 30px;
+    text-align: center; }
+  .pagina-produtos-servicos .lista-de-servicos {
+    margin-top: 15px; }
+
 #chatbot {
   margin: auto;
   text-align: center;
@@ -525,3 +546,49 @@ footer {
     font-family: "Proxima Nova Alt Rg"; }
     #chatbot h2 strong {
       font-family: "Proxima Nova Lt"; }
+
+.lista-de-servicos {
+  padding: 0px;
+  background: transparent; }
+
+.owl-theme .owl-nav .owl-prev {
+  position: absolute;
+  left: -25px;
+  top: 43%;
+  width: 30px;
+  height: 30px;
+  background-size: 18px;
+  background-color: #f1f1f1;
+  background-image: url("../img/arrow-left.png");
+  overflow: hidden;
+  text-indent: -999px;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: center; }
+  .owl-theme .owl-nav .owl-prev:hover {
+    background: transparent;
+    background-color: #cccccc !important;
+    background-image: url("../img/arrow-left.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center; }
+
+.owl-theme .owl-nav .owl-next {
+  position: absolute;
+  right: -25px;
+  top: 43%;
+  width: 30px;
+  height: 30px;
+  background-size: 18px;
+  background-color: #f1f1f1;
+  background-image: url("../img/arrow-right.png");
+  overflow: hidden;
+  text-indent: -999px;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: center; }
+  .owl-theme .owl-nav .owl-next:hover {
+    background: transparent;
+    background-color: #cccccc !important;
+    background-image: url("../img/arrow-right.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center; }

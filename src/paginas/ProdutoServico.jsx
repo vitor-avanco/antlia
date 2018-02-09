@@ -28,18 +28,18 @@ class ProdutoServico extends Component {
                 <div className="bg-cinza">
                     <div className="container">
                         <div className="row">
-                            <div className="col-sm-5" dangerouslySetInnerHTML={{__html:page.acf.conheca_nossos_produtos}}></div>
-                            <div className="col-sm-7">
-                                <Servicos />
+                            <div className="col-sm-6" dangerouslySetInnerHTML={{__html:page.acf.conheca_nossos_produtos}}></div>
+                            <div className="col-sm-6" style={{paddingLeft: 0+'px'}} >
+                                <Produtos />
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="container">
                         <div className="row">
-                            <div className="col-sm-12" dangerouslySetInnerHTML={{__html:page.acf.conheca_nossos_servicos}}></div>
+                            <div className="col-sm-12 text-center" dangerouslySetInnerHTML={{__html:page.acf.conheca_nossos_servicos}}></div>
                             <div className="col-sm-12">
-                                <Produtos />
+                                <Servicos />
                             </div>
                         </div>
                     </div>

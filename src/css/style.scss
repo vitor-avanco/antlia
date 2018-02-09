@@ -179,9 +179,9 @@ footer{
 		span{
 			font-family: $bold;
 		}
-		p{
+		.resumo, p{
 			color: #000;
-			font-size: 15px;
+			font-size: 14px;
 			line-height: 22px;
 			height: 88px;
 			overflow: hidden;
@@ -595,6 +595,35 @@ display: table;}
 		}
 	}
 }
+.bg-cinza{
+	margin: 50px 0px;
+	padding: 50px 0px;
+	background: #f6f6f6;
+
+
+}
+.pagina-produtos-servicos{
+	padding-bottom: 60px;
+	.bg-cinza{
+		h2{
+			font-family: $titulo;
+			font-size: 30px;
+			text-align: left;
+			margin-top: 20%;
+		}
+		.lista-de-servicos{
+			margin-top: 0px;
+		}
+	}	
+	h2{
+		font-family: $titulo;
+		font-size: 30px;
+		text-align: center;
+	}
+	.lista-de-servicos{
+		margin-top: 15px;
+	}
+}
 
 #chatbot{
 	
@@ -610,5 +639,55 @@ display: table;}
 		strong{
 			font-family: $bold;
 		}
+	}
+}
+.lista-de-servicos{
+	padding: 0px;
+	background: transparent;
+}
+
+.owl-theme .owl-nav .owl-prev{
+	position: absolute;
+    left: -25px;
+    top: 43%;
+    width: 30px;
+    height: 30px;
+    background-size: 18px;
+    background-color: #f1f1f1;
+	background-image: url('../img/arrow-left.png');
+	overflow: hidden;
+	text-indent: -999px;
+	background-size: 18px;
+	background-repeat: no-repeat;
+	background-position: center;
+	&:hover{
+		background: transparent;
+		background-color: #cccccc !important;
+		background-image: url('../img/arrow-left.png') !important;
+		background-repeat: no-repeat !important;
+		background-position: center;
+	}
+}
+
+.owl-theme .owl-nav .owl-next{
+	position: absolute;
+    right: -25px;
+    top: 43%;
+    width: 30px;
+    height: 30px;
+    background-size: 18px;
+    background-color: #f1f1f1;
+	background-image: url('../img/arrow-right.png');
+	overflow: hidden;
+	text-indent: -999px;
+	background-size: 18px;
+	background-repeat: no-repeat;
+	background-position: center;
+	&:hover{
+		background: transparent;
+		background-color: #cccccc !important;
+		background-image: url('../img/arrow-right.png') !important;
+		background-repeat: no-repeat !important;
+		background-position: center;
 	}
 }
