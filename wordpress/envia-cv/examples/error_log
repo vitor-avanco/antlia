@@ -1,0 +1,79 @@
+[09-Feb-2018 08:47:03 UTC] PHP Notice:  Undefined index: nome in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 3
+[09-Feb-2018 08:47:03 UTC] PHP Notice:  Undefined index: email in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 4
+[09-Feb-2018 08:47:03 UTC] PHP Notice:  Undefined index: telefone in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 5
+[09-Feb-2018 08:47:03 UTC] PHP Notice:  Undefined index: horario in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 6
+[09-Feb-2018 08:47:03 UTC] PHP Notice:  Undefined index: interesse in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 7
+[09-Feb-2018 08:47:03 UTC] PHP Notice:  Undefined index: duvidas in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 8
+[09-Feb-2018 08:47:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function eregi_replace() in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 17
+[09-Feb-2018 08:47:05 UTC] PHP Notice:  Undefined index: nome in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 3
+[09-Feb-2018 08:47:05 UTC] PHP Notice:  Undefined index: email in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 4
+[09-Feb-2018 08:47:05 UTC] PHP Notice:  Undefined index: telefone in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 5
+[09-Feb-2018 08:47:05 UTC] PHP Notice:  Undefined index: horario in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 6
+[09-Feb-2018 08:47:05 UTC] PHP Notice:  Undefined index: interesse in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 7
+[09-Feb-2018 08:47:05 UTC] PHP Notice:  Undefined index: duvidas in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 8
+[09-Feb-2018 08:47:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function eregi_replace() in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 17
+[09-Feb-2018 08:47:11 UTC] PHP Notice:  Undefined index: nome in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 3
+[09-Feb-2018 08:47:11 UTC] PHP Notice:  Undefined index: email in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 4
+[09-Feb-2018 08:47:11 UTC] PHP Notice:  Undefined index: telefone in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 5
+[09-Feb-2018 08:47:11 UTC] PHP Notice:  Undefined index: horario in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 6
+[09-Feb-2018 08:47:11 UTC] PHP Notice:  Undefined index: interesse in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 7
+[09-Feb-2018 08:47:11 UTC] PHP Notice:  Undefined index: duvidas in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 8
+[09-Feb-2018 08:47:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function eregi_replace() in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 17
+[09-Feb-2018 08:48:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function eregi_replace() in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 17
+[09-Feb-2018 08:51:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function eregi_replace() in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 17
+[09-Feb-2018 08:51:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function eregi_replace() in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 17
+[09-Feb-2018 08:51:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function eregi_replace() in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 17
+[09-Feb-2018 08:51:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function eregi_replace() in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 17
+[09-Feb-2018 08:51:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function eregi_replace() in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 17
+[09-Feb-2018 08:51:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function eregi_replace() in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 17
+[09-Feb-2018 08:51:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function eregi_replace() in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 17
+[09-Feb-2018 08:51:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function eregi_replace() in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 17
+[09-Feb-2018 08:52:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function eregi_replace() in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 17
+[09-Feb-2018 08:56:20 UTC] PHP Notice:  Undefined index: nome in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 3
+[09-Feb-2018 08:56:36 UTC] PHP Notice:  Undefined index: nome in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 3
+[09-Feb-2018 08:56:41 UTC] PHP Notice:  Undefined index: nome in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 3
+[09-Feb-2018 08:56:42 UTC] PHP Notice:  Undefined index: nome in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 3
+[09-Feb-2018 08:56:43 UTC] PHP Notice:  Undefined index: nome in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 3
+[09-Feb-2018 08:56:43 UTC] PHP Notice:  Undefined index: nome in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 3
+[09-Feb-2018 08:56:43 UTC] PHP Notice:  Undefined index: nome in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 3
+[09-Feb-2018 08:58:19 UTC] PHP Notice:  Undefined index: nome in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 3
+[09-Feb-2018 08:58:24 UTC] PHP Notice:  Undefined index: nome in /home/pkx9wfbz0lrp/public_html/server/app/wordpress/envia-cv/examples/test_smtp_basic.php on line 3

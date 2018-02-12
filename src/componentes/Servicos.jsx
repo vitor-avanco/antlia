@@ -13,7 +13,8 @@ class Servicos extends Component {
     }
 
       
-    componentDidMount(){  
+    componentDidMount(){ 
+        window.scrollTo(0,0);
         $.ajax({
             url:"http://server.bioage.com.br/app/wordpress/wp-json/wp/v2/servicos/",
             dataType: 'json',
@@ -29,10 +30,8 @@ class Servicos extends Component {
              <div className="lista-de-servicos-produtos lista-de-servicos">
                 <div className="container">
                 {this.state.listaServicos.length > 0?
-                    <OwlCarousel className="owl-theme" margin={15} items={4} nav loop dots={false}>
+                    <OwlCarousel className="owl-theme" margin={15} items={4} nav loop dots={false} responsive={ { 0:{ items:2}, 768:{ items:4} } }>
                         {this.state.listaServicos.map(function(item,key){
-                                console.log(item.slug)
-                                console.log("=====")
                                 return(
                                     <div className="item" key={key}>
                                         <Link to={item.slug}>

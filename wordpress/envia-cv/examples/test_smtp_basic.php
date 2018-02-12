@@ -9,10 +9,11 @@ $mail = new PHPMailer();
 
 $mail->IsSMTP(); 
 $mail->SMTPDebug = 1; 
-$mail->SMTPAuth = true;
+$mail->SMTPAuth = true; 
+$mail->SMTPSecure = 'ssl'; 
 $mail->Host = 'smtp.elasticemail.com';
 
-$mail->Port = 2525; 
+$mail->Port = 465; 
 $mail->IsHTML(true);
 //Username to use for SMTP authentication
 $mail->Username = 'julianepiovezan@cvc.com.br';  

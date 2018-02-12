@@ -4,6 +4,112 @@ $bold: 'Proxima Nova Lt';
 $titulo: 'Proxima Nova Alt Cn Lt';
 $azulEscuro: #014281;
 
+$media-queries: true;
+
+@mixin bp($point) {
+  @if ($media-queries) {
+    $bp-large-screen: 1824px;
+    $bp-bigscreen: 1824px;
+    $bp-ipad-max: 1024px;
+    $bp-ipad-min: 768px;
+    $bp-iphone5-max: 568px;
+    $bp-iphone-max: 480px;
+	$bp-iphone-min: 320px;
+	
+    // **
+    // --------------------
+    // Options of screen breakpoints:
+    // 1. large-screen - from 1824px
+    // 2. big-screen - to 1824px
+    // 3. ipad-mini - to 758px
+    // 4. ipad - from 758px to 1024px
+    // 5. ipad-portrait - to 758px
+    // 6. iphone5-landscape - to 568px
+    // 7. iphone - from 320px to 480px
+    // 8. iphone-portrait - to 320px
+    // --------------------
+	// **
+	
+    @if $point == large-screen {
+      @media // Very Large Screens
+      only screen and (min-width: #{$bp-large-screen}),
+      only screen and (min-device-width: #{$bp-large-screen}) {
+        @content;
+      }
+    }
+    @if $point == big-screen {
+      @media // Desktops and Laptops
+      only screen and (max-width: #{$bp-bigscreen}),
+      only screen and (max-device-width: #{$bp-bigscreen}) {
+        @content;
+      }
+    }
+    @if $point == ipad-mini {
+      @media // iPad-Mini (portrait and landscape)
+      handheld,
+      only screen and (min-device-pixel-ratio: 1),
+      only screen and (max-width: #{$bp-ipad-min}){
+        @content;
+      }
+    }
+    @if $point == ipad {
+      @media // iPad (portrait and landscape)
+      handheld,
+      only screen and (max-width: #{$bp-ipad-max})
+                  and (min-width: #{$bp-iphone5-max}) {
+        @content;
+      }
+    }
+    @if $point == ipad-portrait {
+      @media // iPad (portrait)
+      handheld,
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (max-width: #{$bp-ipad-min})
+                  and (orientation: portrait) {
+        @content;
+      }
+    }
+    @if $point == iphone5-landscape {
+      @media // iPhone 5 (landscape)
+      handheld,
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (max-width: #{$bp-iphone5-max}) {
+        @content;
+      }
+    }
+    @if $point == iphone {
+      @media // iPhone (portrait and landscape)
+      handheld,
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (max-width: #{$bp-iphone-max})
+                  and (min-width: #{$bp-iphone-min}) {
+        @content;
+      }
+    }
+    @if $point == iphone-portrait {
+      @media // iPhone (portrait)
+      handheld,
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (max-width: #{$bp-iphone-min}) {
+        @content;
+      }
+    }
+  }
+}
+
+@include bp(ipad){
+	body, .container{
+		min-width: 1140px;
+		max-width: 1140px;
+		width: 1140px;
+	}
+}
+@include bp(iphone){
+	.hidden-xs{
+		display: none !important;
+	}
+}
+
 
 *{
 	font-family: $regular;
@@ -18,9 +124,18 @@ $azulEscuro: #014281;
 	background-repeat: no-repeat;
 	overflow: hidden;
 	text-indent: -999px;
+	@include bp(iphone){
+		height: 50px;
+	}
 	a{
 		display: block;
 		height: 100%;
+	}
+}
+body{
+	padding-top: 107px;
+	@include bp(iphone){
+		padding-top: 71px;
 	}
 }
 header{
@@ -28,7 +143,13 @@ header{
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #f1f1f1;
-	
+	background: #FFF;
+    position: fixed;
+    width: 100%;
+	z-index: 99;
+	top: 0px;
+	left: 0px;
+
 	.menu-topo{
 		text-align: right;
 		margin-top: 30px;
@@ -46,6 +167,25 @@ header{
 					color: $azulEscuro;
 					text-decoration: none;
 				}
+			}
+		}
+	}
+	.menu-mobile{
+		
+		@include bp(ipad){
+			display: none;
+		}
+		@include bp(big-screen){
+			display: none;
+		}
+		@include bp(large-screen){
+			display: none;
+		}
+		@include bp(iphone){
+			display: block;
+
+			img{
+				height: 50px;
 			}
 		}
 	}	
@@ -66,6 +206,9 @@ header{
 			max-width: 500px;
 			margin-left: auto;
 			margin-right: auto;
+			@include bp(iphone){
+				padding: 0 10px;
+			}
 		}
 	}
 
@@ -104,6 +247,9 @@ footer{
 	.logotipo{
 		position: relative;
 		overflow: initial;
+		@include bp(iphone){
+			display: none;
+		}
 		&:after{
 			content: '';
 			position: absolute;
@@ -119,6 +265,9 @@ footer{
 		color: #666;
 		margin-top: 20px;
 		display: block;
+		@include bp(iphone){
+			text-align: center;
+		}
 		p{
 			margin-bottom: 0px;
 		}
@@ -129,6 +278,9 @@ footer{
 		font-family: $bold;
 		font-size: 13px;
 		text-align: right;
+		@include bp(iphone){
+			text-align: center;
+		}
 		.icones-social{
 			margin-left: 10px;
 			display: inline-block;
@@ -143,6 +295,9 @@ footer{
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat;
+		@include bp(iphone){
+			display: none;
+		}
 	}
 	hr{
 		margin-top: 25px;
@@ -150,6 +305,11 @@ footer{
 	}
 	.copyright{
 		margin-top: 20px;
+		@include bp(iphone){
+			text-align: center;
+			margin-top: 0px;
+			margin-bottom: 20px;
+		}
 	}
 }
 
@@ -162,6 +322,10 @@ footer{
 		padding: 25px 15px;
 		text-align: center;
 		height: 337px;
+		@include bp(iphone){
+			margin-bottom: 15px;
+			height: auto;
+		}
 		a{
 			color: #000000;
 			&:hover{
@@ -175,22 +339,32 @@ footer{
 			margin-top: 20px;
 			height: 48px;
 			overflow: hidden;
+			@include bp(iphone){
+				font-size: 16px;
+				height: 38px;
+			}
 		}
 		span{
 			font-family: $bold;
 		}
 		.resumo, p{
 			color: #000;
-			font-size: 14px;
+			font-size: 15px;
 			line-height: 22px;
 			height: 88px;
 			overflow: hidden;
+			@include bp(iphone){
+				font-size: 14px;
+				line-height: 17px;
+				height: 83px;
+			}
 		}
 		img{
 			width: 80px;
 			height: 80px;
 			margin: auto;
 			display: block;
+			max-width: 80px;
 		}
 	}
 }
@@ -198,6 +372,9 @@ footer{
 	padding: 70px 0px;
 	display: table;
 	width: 100%;
+	@include bp(iphone){
+		padding: 30px 0px;
+	}
 	.col-sm-6{
 		position: relative;
 
@@ -207,6 +384,13 @@ footer{
 			color: rgba(51,51,51,0.87);	
 			font-size: 30px;
 			line-height: 36px;
+			@include bp(iphone){
+				margin-top: 0px;
+				text-align: center;
+				font-size: 22px;
+				line-height: 26px;
+    			margin-bottom: 25px;
+			}
 		}
 	}
 	.blocos-de-linguagens{
@@ -221,6 +405,9 @@ footer{
 			background-position: center;
 			background-size: 130px;
 			background-repeat: no-repeat;
+			@include bp(iphone){
+				width: 48%;
+			}
 		}
 	}
 }
@@ -230,9 +417,14 @@ footer{
 	display: table;
 	width: 100%;
 	background-color: #f6f6f6;
+	@include bp(iphone){
+		position: relative;
+	}
 	.col-sm-6{
 		position: relative;
-
+		@include bp(iphone){
+			position: initial;
+		}
 		h3{
 			max-width: 450px;
 			margin-top: 18%;
@@ -241,9 +433,20 @@ footer{
 			line-height: 36px;
 			margin-right: 0px;
 			margin-left: auto;
+			@include bp(iphone){
+				margin-top: 0px;
+				font-size: 20px;
+				position: absolute;
+				top: 30px;
+				line-height: 22px;
+				text-align: center;
+			}
 		}
 	}
 	.blocos-de-clientes{
+		@include bp(iphone){
+			margin-top: 35px;
+		}
 		.item{
 			display: inline-block;
 			border: 1px solid #ddd;
@@ -256,6 +459,9 @@ footer{
 			background-size: 100px;
 			background-repeat: no-repeat;
 			background-color: #FFFFFF;
+			@include bp(iphone){
+				width: 48%;
+			}
 		}
 	}
 }
@@ -278,10 +484,19 @@ footer{
 		color: #FFF;
 		background-color: $azulEscuro;
 		height: 275px;
+		@include bp(iphone){
+			height: auto !important;
+		}
 		h1{
 			color: #FFF;
 			font-family: $titulo;
 			padding-top: 70px;
+			@include bp(iphone){
+				padding-top: 20px;
+				padding-bottom: 20px;
+				font-size: 24px;
+				line-height: 25px;
+			}
 		}
 	}
 	.border-radius-top{
@@ -291,8 +506,15 @@ footer{
 		border-top-right-radius: 5px;
 		padding-top: 35px;
 		margin-top: -100px;
+		@include bp(iphone){
+			margin-top: 0px !important;
+			padding-top: 10px;
+		}
 		.text-introducao{
-			margin: auto
+			margin: auto;
+			p{
+				font-size: 15px;
+			}
 		}
 	}
 }
@@ -319,7 +541,7 @@ footer{
 			margin: auto;
 			margin-top: 0px;
 			color: #333333;	
-			font-size: 16px;
+			font-size: 15px;
 			line-height: 22px;
 			text-align: center;
 		}
@@ -327,6 +549,9 @@ footer{
 }
 .pagina-texto-final{
 	margin: 50px 0px;
+	p{
+		font-size: 15px;
+	}
 }
 .box-lead{
 	background: $azulEscuro;
@@ -356,6 +581,11 @@ footer{
 		margin: 0 15px 30px 15px;
 		width: calc(50% - 30px);
 		position: relative;
+		@include bp(iphone){
+			width: 100%;
+			margin: 0px;
+			margin-bottom: 15px;
+		}
 		h3{
 			display: block;
 			background: #4A90E2;
@@ -410,6 +640,37 @@ footer{
 	height: 100%;
 	z-index: 99;
 	display: none;
+	&.show-form{
+		position: relative;
+		display: block;
+		top: initial;
+		left: initial;
+		height: auto;
+		background: transparent;
+		.faixa-form{
+			bottom: initial;
+			left: initial;
+			position: relative;
+			.formulario{
+				.fechar{
+					display: none;
+				}
+				.form-input{
+					width: 100%;
+				}
+				.form-textarea{
+					height: 112px;
+					margin-bottom: 0px;
+					padding-top: 5px;
+				}
+				.botao-enviar{
+					width: 100%;
+					height: 45px;
+					margin-top: 11px;
+				}
+			}
+		}
+	}
 	.faixa-form{
 		width: 100%;
 		background: $azulEscuro;
@@ -442,9 +703,15 @@ footer{
 			color: #FFF;
 			font-family: $regular;
 			margin-bottom: 25px;
+			@include bp(iphone){
+				font-size: 18px;
+			}
 			span{
 				display: block;
 				font-size: 32px;
+				@include bp(iphone){
+					font-size: 18px;
+				}
 			}
 		}
 		.form-input{
@@ -456,9 +723,10 @@ footer{
 			color: #666666;
 			font-size: 16px;
 			margin-bottom: 20px;
+			width: 100%;
 		}
-		.botao-candidatar{
-			background: #7ED321;
+		.botao-candidatar, .botao-enviar{
+			background-color: #7ED321;
 			color: #FFF;
 			padding: 10px 15px;
 			display: inline-block;
@@ -467,10 +735,19 @@ footer{
 			margin-top: 10px;
 			border: 0px;
 			cursor: pointer;
+			@include bp(iphone){
+				margin-top: 120px;
+			}
 			&:hover{
 				text-decoration: none;
 			}
 		}
+	}
+}
+
+@include bp(iphone){
+	.owl-carousel.owl-drag .owl-item{
+		width: 100%;
 	}
 }
 
@@ -605,11 +882,22 @@ display: table;}
 .pagina-produtos-servicos{
 	padding-bottom: 60px;
 	.bg-cinza{
+		margin-top: 10px;
 		h2{
 			font-family: $titulo;
 			font-size: 30px;
 			text-align: left;
 			margin-top: 20%;
+			@include bp(iphone){
+				margin-top: 0px;
+				font-size: 22px;
+				text-align: center;
+			}
+		}
+		p{
+			@include bp(iphone){
+				text-align: center;
+			}
 		}
 		.lista-de-servicos{
 			margin-top: 0px;
@@ -689,5 +977,188 @@ display: table;}
 		background-image: url('../img/arrow-right.png') !important;
 		background-repeat: no-repeat !important;
 		background-position: center;
+	}
+}
+.lista-de-servicos-produtos-home{
+	background-color: #f6f6f6;
+    padding: 45px 0px;
+}
+
+.carregando{
+	background-image: url(../img/loading-branco.svg);
+	background-size: 35px;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: transparent !important;
+}
+.pagina-de-servico{
+	& + footer{
+		margin-top: 30px;
+	}
+	.header-azul{
+		@include bp(iphone){
+			height: 20px;
+		}
+	}
+	.border-radius-top{
+		margin-top: -200px;
+		@include bp(iphone){
+			margin-top: 0px !important;
+		}
+		h1{
+			.icone{
+				margin-right: 10px;
+			}
+			color: #000000;
+			font-size: 36px;
+			font-family: $titulo;
+			margin-bottom: 30px;
+			@include bp(iphone){
+				font-size: 22px;
+				line-height: 22px;
+			}
+		}
+		.conteudo{
+			margin-top: 0px;
+			p{
+				font-size: 15px;
+			}	
+		}
+	}
+	.RRT__container{
+		width: 100%;
+		padding: 0 15px;
+		.RRT__tabs{
+			&.RRT__accordion{
+				> div:last-child{
+					margin-bottom: 20px;
+				}
+				.RRT__tab{
+					display: block;
+					padding: 5px 18px;
+					border: 1px solid #DDDDDD;
+					border-radius: 3px 3px 0 0;
+					background-color: #FFFFFF;
+					color: $azulEscuro;
+					font-family: $bold;
+					text-transform: uppercase;
+					font-size: 12px;
+					line-height: 26px;
+					cursor: pointer;
+					&.RRT__tab--selected{
+						background-color: $azulEscuro;
+						color: #FFFFFF;
+						border-color: $azulEscuro;
+						outline: none;
+						position: relative;
+					}
+				}
+				.RRT__panel{
+					margin-bottom: 0px;
+				}
+			}
+			.RRT__showmore{
+				outline: none;
+				margin-top: 30px;
+				.RRT__showmore-label{
+					display: none !important;
+				}
+				.RRT__showmore-list{
+					display:block;
+					outline: none;
+					.RRT__tab{
+						vertical-align: top;
+						display: inline-block;
+						padding: 5px 18px;
+						border: 1px solid #DDDDDD;
+						border-radius: 3px 3px 0 0;
+						background-color: #FFFFFF;
+						color: $azulEscuro;
+						font-family: $bold;
+						text-transform: uppercase;
+						font-size: 12px;
+						line-height: 26px;
+						margin-right: -1px;
+						cursor: pointer;
+						&.RRT__tab--selected{
+							background-color: $azulEscuro;
+							color: #FFFFFF;
+							border-color: $azulEscuro;
+							outline: none;
+							position: relative;
+							&:after {
+								top: 100%;
+								left: 50%;
+								border: solid transparent;
+								content: " ";
+								height: 0;
+								width: 0;
+								position: absolute;
+								pointer-events: none;
+								border-color: rgba(1, 66, 129, 0);
+								border-top-color: #014281;
+								border-width: 10px;
+								margin-left: -10px;
+							}
+						}
+					}
+					
+				}
+			}
+		}
+		.RRT__panel{
+			width: 100%;
+			padding: 15px;
+			padding-top: 20px;
+			height: auto;
+			border: 1px solid #DDDDDD;
+			border-radius: 3px 3px 0 0;
+			background-color: #FFFFFF;
+			margin-top: -1px;
+			font-size: 14px;
+			margin-bottom: 30px;
+		}
+	}
+}
+.pagina-institucional.pagina-produtos-servicos .border-radius-top .text-introducao p{
+	margin-bottom: 30px;
+}
+.lista-de-servicos-produtos .item span{
+	margin-top: 15px;
+	display: block;
+}
+.container-menu-mobile{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0,0,0,0.9);
+	z-index: 99999;
+	display: none;
+	.fechar{
+		float: left;
+		width: 30%;
+		height: 100vh;
+	}
+	.menu{
+		float: right;
+		width: 70%;
+		background: $azulEscuro;
+		height: 100vh;
+		margin-right: -100%;
+		ul{
+			padding-left: 0px;
+			li{
+				display: block;
+				padding: 8px 15px;
+				border-bottom: 1px solid rgba(255,255,255,0.1);
+				a{
+					color: #FFF;
+					font-family: $titulo;
+					font-size: 16px;
+				}
+			}
+		}
 	}
 }

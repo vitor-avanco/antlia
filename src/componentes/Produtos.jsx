@@ -27,9 +27,9 @@ class Produtos extends Component {
     render(){
         return (
              <div className="lista-de-servicos-produtos lista-de-servicos">
-                <div className="container">
+                
                 {this.state.listaProdutos.length > 0?
-                    <OwlCarousel className="owl-theme" margin={15} items={2} nav loop dots={false}>
+                    <OwlCarousel className="owl-theme" margin={15} items={2} nav loop dots={false} responsiveClass={true} responsive={ { 0:{ items:2} } }>
                     {
                         this.state.listaProdutos.map(function(item,key){
                             return(
@@ -47,7 +47,6 @@ class Produtos extends Component {
                     }
                     </OwlCarousel>
                     :""}
-                </div>
                 
             </div>
         );

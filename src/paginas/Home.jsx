@@ -104,15 +104,16 @@ class BannerPrincipal extends Component{
 }
 
 class Home extends React.Component {
+	componentDidMount(){ 
+        window.scrollTo(0,0);
+    }
     render() {
         
         return (
             <div>
             	<MetaTags>
 		            <title>Antlia</title>
-		            <meta id="meta-description" name="description" content="Some description." />
-		            <meta id="og-title" property="og:title" content="MyApp" />
-		            <meta id="og-image" property="og:image" content="path/to/image.jpg" />
+		            <meta id="meta-description" name="description" content="Empresa especializada no desenvolvimento de softwares e serviços de TI, buscando constantemente a excelência de qualidade em seus serviços" />
 		          </MetaTags>
 
             	<BannerPrincipal />

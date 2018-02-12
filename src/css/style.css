@@ -1,3 +1,13 @@
+@media handheld, only screen and (max-width: 1024px) and (min-width: 568px) {
+  body, .container {
+    min-width: 1140px;
+    max-width: 1140px;
+    width: 1140px; } }
+
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+  .hidden-xs {
+    display: none !important; } }
+
 * {
   font-family: "Proxima Nova Alt Rg"; }
 
@@ -11,15 +21,30 @@
   background-repeat: no-repeat;
   overflow: hidden;
   text-indent: -999px; }
+  @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+    .logotipo {
+      height: 50px; } }
   .logotipo a {
     display: block;
     height: 100%; }
+
+body {
+  padding-top: 107px; }
+  @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+    body {
+      padding-top: 71px; } }
 
 header {
   height: auto;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #f1f1f1; }
+  border-bottom: 1px solid #f1f1f1;
+  background: #FFF;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  top: 0px;
+  left: 0px; }
   header .menu-topo {
     text-align: right;
     margin-top: 30px;
@@ -36,6 +61,20 @@ header {
         header .menu-topo li a:hover, header .menu-topo li a:focus, header .menu-topo li a:active {
           color: #014281;
           text-decoration: none; }
+  @media handheld, only screen and (max-width: 1024px) and (min-width: 568px) {
+    header .menu-mobile {
+      display: none; } }
+  @media only screen and (max-width: 1824px), only screen and (max-device-width: 1824px) {
+    header .menu-mobile {
+      display: none; } }
+  @media only screen and (min-width: 1824px), only screen and (min-device-width: 1824px) {
+    header .menu-mobile {
+      display: none; } }
+  @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+    header .menu-mobile {
+      display: block; }
+      header .menu-mobile img {
+        height: 50px; } }
 
 .banner-principal {
   height: calc(100vh - 104px);
@@ -53,6 +92,9 @@ header {
       max-width: 500px;
       margin-left: auto;
       margin-right: auto; }
+      @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+        .banner-principal > div h2 {
+          padding: 0 10px; } }
 
 .icones-social li {
   display: inline-block; }
@@ -81,6 +123,9 @@ footer {
   footer .logotipo {
     position: relative;
     overflow: initial; }
+    @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+      footer .logotipo {
+        display: none; } }
     footer .logotipo:after {
       content: '';
       position: absolute;
@@ -94,6 +139,9 @@ footer {
     color: #666;
     margin-top: 20px;
     display: block; }
+    @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+      footer .texto-footer {
+        text-align: center; } }
     footer .texto-footer p {
       margin-bottom: 0px; }
   footer .social-footer {
@@ -102,6 +150,9 @@ footer {
     font-family: "Proxima Nova Lt";
     font-size: 13px;
     text-align: right; }
+    @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+      footer .social-footer {
+        text-align: center; } }
     footer .social-footer .icones-social {
       margin-left: 10px;
       display: inline-block;
@@ -114,11 +165,19 @@ footer {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat; }
+    @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+      footer .certificacoes {
+        display: none; } }
   footer hr {
     margin-top: 25px;
     border-top: 1px solid #f1f1f1; }
   footer .copyright {
     margin-top: 20px; }
+    @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+      footer .copyright {
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 20px; } }
 
 .lista-de-servicos-produtos {
   background-color: #f6f6f6;
@@ -129,6 +188,10 @@ footer {
     padding: 25px 15px;
     text-align: center;
     height: 337px; }
+    @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+      .lista-de-servicos-produtos .item {
+        margin-bottom: 15px;
+        height: auto; } }
     .lista-de-servicos-produtos .item a {
       color: #000000; }
       .lista-de-servicos-produtos .item a:hover {
@@ -140,24 +203,37 @@ footer {
       margin-top: 20px;
       height: 48px;
       overflow: hidden; }
+      @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+        .lista-de-servicos-produtos .item h3 {
+          font-size: 16px;
+          height: 38px; } }
     .lista-de-servicos-produtos .item span {
       font-family: "Proxima Nova Lt"; }
     .lista-de-servicos-produtos .item .resumo, .lista-de-servicos-produtos .item p {
       color: #000;
-      font-size: 14px;
+      font-size: 15px;
       line-height: 22px;
       height: 88px;
       overflow: hidden; }
+      @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+        .lista-de-servicos-produtos .item .resumo, .lista-de-servicos-produtos .item p {
+          font-size: 14px;
+          line-height: 17px;
+          height: 83px; } }
     .lista-de-servicos-produtos .item img {
       width: 80px;
       height: 80px;
       margin: auto;
-      display: block; }
+      display: block;
+      max-width: 80px; }
 
 .lista-de-linguagens {
   padding: 70px 0px;
   display: table;
   width: 100%; }
+  @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+    .lista-de-linguagens {
+      padding: 30px 0px; } }
   .lista-de-linguagens .col-sm-6 {
     position: relative; }
     .lista-de-linguagens .col-sm-6 h3 {
@@ -166,6 +242,13 @@ footer {
       color: rgba(51, 51, 51, 0.87);
       font-size: 30px;
       line-height: 36px; }
+      @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+        .lista-de-linguagens .col-sm-6 h3 {
+          margin-top: 0px;
+          text-align: center;
+          font-size: 22px;
+          line-height: 26px;
+          margin-bottom: 25px; } }
   .lista-de-linguagens .blocos-de-linguagens .item {
     display: inline-block;
     border: 1px solid #ddd;
@@ -177,14 +260,23 @@ footer {
     background-position: center;
     background-size: 130px;
     background-repeat: no-repeat; }
+    @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+      .lista-de-linguagens .blocos-de-linguagens .item {
+        width: 48%; } }
 
 .lista-de-clientes {
   padding: 70px 0px;
   display: table;
   width: 100%;
   background-color: #f6f6f6; }
+  @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+    .lista-de-clientes {
+      position: relative; } }
   .lista-de-clientes .col-sm-6 {
     position: relative; }
+    @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+      .lista-de-clientes .col-sm-6 {
+        position: initial; } }
     .lista-de-clientes .col-sm-6 h3 {
       max-width: 450px;
       margin-top: 18%;
@@ -193,6 +285,17 @@ footer {
       line-height: 36px;
       margin-right: 0px;
       margin-left: auto; }
+      @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+        .lista-de-clientes .col-sm-6 h3 {
+          margin-top: 0px;
+          font-size: 20px;
+          position: absolute;
+          top: 30px;
+          line-height: 22px;
+          text-align: center; } }
+  @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+    .lista-de-clientes .blocos-de-clientes {
+      margin-top: 35px; } }
   .lista-de-clientes .blocos-de-clientes .item {
     display: inline-block;
     border: 1px solid #ddd;
@@ -205,6 +308,9 @@ footer {
     background-size: 100px;
     background-repeat: no-repeat;
     background-color: #FFFFFF; }
+    @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+      .lista-de-clientes .blocos-de-clientes .item {
+        width: 48%; } }
 
 .frase-final-home {
   background-color: #014281;
@@ -223,10 +329,19 @@ footer {
   color: #FFF;
   background-color: #014281;
   height: 275px; }
+  @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+    .pagina-institucional .header-azul {
+      height: auto !important; } }
   .pagina-institucional .header-azul h1 {
     color: #FFF;
     font-family: "Proxima Nova Alt Cn Lt";
     padding-top: 70px; }
+    @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+      .pagina-institucional .header-azul h1 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 24px;
+        line-height: 25px; } }
 
 .pagina-institucional .border-radius-top {
   margin: auto;
@@ -235,8 +350,14 @@ footer {
   border-top-right-radius: 5px;
   padding-top: 35px;
   margin-top: -100px; }
+  @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+    .pagina-institucional .border-radius-top {
+      margin-top: 0px !important;
+      padding-top: 10px; } }
   .pagina-institucional .border-radius-top .text-introducao {
     margin: auto; }
+    .pagina-institucional .border-radius-top .text-introducao p {
+      font-size: 15px; }
 
 .missao-visao-valores {
   background-color: #014281;
@@ -257,12 +378,14 @@ footer {
       margin: auto;
       margin-top: 0px;
       color: #333333;
-      font-size: 16px;
+      font-size: 15px;
       line-height: 22px;
       text-align: center; }
 
 .pagina-texto-final {
   margin: 50px 0px; }
+  .pagina-texto-final p {
+    font-size: 15px; }
 
 .box-lead {
   background: #014281;
@@ -289,6 +412,11 @@ footer {
     margin: 0 15px 30px 15px;
     width: calc(50% - 30px);
     position: relative; }
+    @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+      .lista-de-vagas .item {
+        width: 100%;
+        margin: 0px;
+        margin-bottom: 15px; } }
     .lista-de-vagas .item h3 {
       display: block;
       background: #4A90E2;
@@ -349,6 +477,29 @@ footer {
   height: 100%;
   z-index: 99;
   display: none; }
+  .formulario-vaga.show-form {
+    position: relative;
+    display: block;
+    top: initial;
+    left: initial;
+    height: auto;
+    background: transparent; }
+    .formulario-vaga.show-form .faixa-form {
+      bottom: initial;
+      left: initial;
+      position: relative; }
+      .formulario-vaga.show-form .faixa-form .formulario .fechar {
+        display: none; }
+      .formulario-vaga.show-form .faixa-form .formulario .form-input {
+        width: 100%; }
+      .formulario-vaga.show-form .faixa-form .formulario .form-textarea {
+        height: 112px;
+        margin-bottom: 0px;
+        padding-top: 5px; }
+      .formulario-vaga.show-form .faixa-form .formulario .botao-enviar {
+        width: 100%;
+        height: 45px;
+        margin-top: 11px; }
   .formulario-vaga .faixa-form {
     width: 100%;
     background: #014281;
@@ -378,9 +529,15 @@ footer {
       color: #FFF;
       font-family: "Proxima Nova Alt Rg";
       margin-bottom: 25px; }
+      @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+        .formulario-vaga form h3 {
+          font-size: 18px; } }
       .formulario-vaga form h3 span {
         display: block;
         font-size: 32px; }
+        @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+          .formulario-vaga form h3 span {
+            font-size: 18px; } }
     .formulario-vaga form .form-input {
       border: 1px solid #ccc;
       border-radius: 3px;
@@ -389,9 +546,10 @@ footer {
       padding-left: 15px;
       color: #666666;
       font-size: 16px;
-      margin-bottom: 20px; }
-    .formulario-vaga form .botao-candidatar {
-      background: #7ED321;
+      margin-bottom: 20px;
+      width: 100%; }
+    .formulario-vaga form .botao-candidatar, .formulario-vaga form .botao-enviar {
+      background-color: #7ED321;
       color: #FFF;
       padding: 10px 15px;
       display: inline-block;
@@ -400,8 +558,15 @@ footer {
       margin-top: 10px;
       border: 0px;
       cursor: pointer; }
-      .formulario-vaga form .botao-candidatar:hover {
+      @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+        .formulario-vaga form .botao-candidatar, .formulario-vaga form .botao-enviar {
+          margin-top: 120px; } }
+      .formulario-vaga form .botao-candidatar:hover, .formulario-vaga form .botao-enviar:hover {
         text-decoration: none; }
+
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+  .owl-carousel.owl-drag .owl-item {
+    width: 100%; } }
 
 .drop {
   width: 96%;
@@ -520,13 +685,23 @@ footer {
 
 .pagina-produtos-servicos {
   padding-bottom: 60px; }
-  .pagina-produtos-servicos .bg-cinza h2 {
-    font-family: "Proxima Nova Alt Cn Lt";
-    font-size: 30px;
-    text-align: left;
-    margin-top: 20%; }
-  .pagina-produtos-servicos .bg-cinza .lista-de-servicos {
-    margin-top: 0px; }
+  .pagina-produtos-servicos .bg-cinza {
+    margin-top: 10px; }
+    .pagina-produtos-servicos .bg-cinza h2 {
+      font-family: "Proxima Nova Alt Cn Lt";
+      font-size: 30px;
+      text-align: left;
+      margin-top: 20%; }
+      @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+        .pagina-produtos-servicos .bg-cinza h2 {
+          margin-top: 0px;
+          font-size: 22px;
+          text-align: center; } }
+    @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+      .pagina-produtos-servicos .bg-cinza p {
+        text-align: center; } }
+    .pagina-produtos-servicos .bg-cinza .lista-de-servicos {
+      margin-top: 0px; }
   .pagina-produtos-servicos h2 {
     font-family: "Proxima Nova Alt Cn Lt";
     font-size: 30px;
@@ -592,3 +767,158 @@ footer {
     background-image: url("../img/arrow-right.png") !important;
     background-repeat: no-repeat !important;
     background-position: center; }
+
+.lista-de-servicos-produtos-home {
+  background-color: #f6f6f6;
+  padding: 45px 0px; }
+
+.carregando {
+  background-image: url(../img/loading-branco.svg);
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: transparent !important; }
+
+.pagina-de-servico + footer {
+  margin-top: 30px; }
+
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+  .pagina-de-servico .header-azul {
+    height: 20px; } }
+
+.pagina-de-servico .border-radius-top {
+  margin-top: -200px; }
+  @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+    .pagina-de-servico .border-radius-top {
+      margin-top: 0px !important; } }
+  .pagina-de-servico .border-radius-top h1 {
+    color: #000000;
+    font-size: 36px;
+    font-family: "Proxima Nova Alt Cn Lt";
+    margin-bottom: 30px; }
+    .pagina-de-servico .border-radius-top h1 .icone {
+      margin-right: 10px; }
+    @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+      .pagina-de-servico .border-radius-top h1 {
+        font-size: 22px;
+        line-height: 22px; } }
+  .pagina-de-servico .border-radius-top .conteudo {
+    margin-top: 0px; }
+    .pagina-de-servico .border-radius-top .conteudo p {
+      font-size: 15px; }
+
+.pagina-de-servico .RRT__container {
+  width: 100%;
+  padding: 0 15px; }
+  .pagina-de-servico .RRT__container .RRT__tabs.RRT__accordion > div:last-child {
+    margin-bottom: 20px; }
+  .pagina-de-servico .RRT__container .RRT__tabs.RRT__accordion .RRT__tab {
+    vertical-align: top;
+    display: block;
+    padding: 5px 18px;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px 3px 0 0;
+    background-color: #FFFFFF;
+    color: #014281;
+    font-family: "Proxima Nova Lt";
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 26px;
+    cursor: pointer; }
+    .pagina-de-servico .RRT__container .RRT__tabs.RRT__accordion .RRT__tab.RRT__tab--selected {
+      background-color: #014281;
+      color: #FFFFFF;
+      border-color: #014281;
+      outline: none;
+      position: relative; }
+  .pagina-de-servico .RRT__container .RRT__tabs.RRT__accordion .RRT__panel {
+    margin-bottom: 0px; }
+  .pagina-de-servico .RRT__container .RRT__tabs .RRT__showmore {
+    outline: none;
+    margin-top: 30px; }
+    .pagina-de-servico .RRT__container .RRT__tabs .RRT__showmore .RRT__showmore-label {
+      display: none !important; }
+    .pagina-de-servico .RRT__container .RRT__tabs .RRT__showmore .RRT__showmore-list {
+      display: block;
+      outline: none; }
+      .pagina-de-servico .RRT__container .RRT__tabs .RRT__showmore .RRT__showmore-list .RRT__tab {
+        vertical-align: top;
+        display: inline-block;
+        padding: 5px 18px;
+        border: 1px solid #DDDDDD;
+        border-radius: 3px 3px 0 0;
+        background-color: #FFFFFF;
+        color: #014281;
+        font-family: "Proxima Nova Lt";
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 26px;
+        margin-right: -1px;
+        cursor: pointer; }
+        .pagina-de-servico .RRT__container .RRT__tabs .RRT__showmore .RRT__showmore-list .RRT__tab.RRT__tab--selected {
+          background-color: #014281;
+          color: #FFFFFF;
+          border-color: #014281;
+          outline: none;
+          position: relative; }
+          .pagina-de-servico .RRT__container .RRT__tabs .RRT__showmore .RRT__showmore-list .RRT__tab.RRT__tab--selected:after {
+            top: 100%;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(1, 66, 129, 0);
+            border-top-color: #014281;
+            border-width: 10px;
+            margin-left: -10px; }
+  .pagina-de-servico .RRT__container .RRT__panel {
+    width: 100%;
+    padding: 15px;
+    padding-top: 20px;
+    height: auto;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px 3px 0 0;
+    background-color: #FFFFFF;
+    margin-top: -1px;
+    font-size: 14px;
+    margin-bottom: 30px; }
+
+.pagina-institucional.pagina-produtos-servicos .border-radius-top .text-introducao p {
+  margin-bottom: 30px; }
+
+.lista-de-servicos-produtos .item span {
+  margin-top: 15px;
+  display: block; }
+
+.container-menu-mobile {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 99999;
+  display: none; }
+  .container-menu-mobile .fechar {
+    float: left;
+    width: 30%;
+    height: 100vh; }
+  .container-menu-mobile .menu {
+    float: right;
+    width: 70%;
+    background: #014281;
+    height: 100vh;
+    margin-right: -100%; }
+    .container-menu-mobile .menu ul {
+      padding-left: 0px; }
+      .container-menu-mobile .menu ul li {
+        display: block;
+        padding: 8px 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+        .container-menu-mobile .menu ul li a {
+          color: #FFF;
+          font-family: "Proxima Nova Alt Cn Lt";
+          font-size: 16px; }

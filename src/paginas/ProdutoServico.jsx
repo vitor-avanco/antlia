@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import DataStore from '../flux/stores/DataStore';
 import Servicos from '../componentes/Servicos';
 import Produtos from '../componentes/Produtos';
+import MetaTags from 'react-meta-tags';
+
 
 class ProdutoServico extends Component {
-
+    componentDidMount(){ 
+        window.scrollTo(0,0);
+    }
     render() {
     	let paginaSlug = this.props.match.path;
     		paginaSlug = paginaSlug.replace('/','');
@@ -15,6 +19,11 @@ class ProdutoServico extends Component {
 
         return (
             <div className="pagina-institucional pagina-produtos-servicos">
+                <MetaTags>
+                    <title>{page.title.rendered}</title>
+                    <meta id="meta-description" name="description" content={page.acf.texto_de_introducao} />
+                    <meta id="og-title" property="og:title" content="{page.title.rendered}" />
+                </MetaTags>
                 <div className="header-azul">
                     <div className="text-center">
                         <h1>{page.title.rendered}</h1>
@@ -22,7 +31,7 @@ class ProdutoServico extends Component {
                 </div>
                 <div className="border-radius-top container">
                     <div className="row">
-                        <div className="col-sm-offset-2 col-sm-8 text-center text-introducao" dangerouslySetInnerHTML={{__html:page.acf.texto_de_introducao}}></div>
+                        <div className="offset-sm-1 col-sm-10 text-center text-introducao" dangerouslySetInnerHTML={{__html:page.acf.texto_de_introducao}}></div>
                     </div>
                 </div>
                 <div className="bg-cinza">

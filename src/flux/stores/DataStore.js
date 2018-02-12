@@ -22,7 +22,7 @@ class DataStore {
             getPageBySlug:  this.getPageBySlug,
 
             getServicoBySlug:  this.getServicoBySlug,
-
+            getProdutoBySlug: this.getProdutoBySlug
             
         });
     }
@@ -69,6 +69,13 @@ class DataStore {
 
     getServicoBySlug(slug){
         const pages = this.getState().data.servicos;
+        return pages[Object.keys(pages).find((page, i) => {
+            return pages[page].slug === slug;
+        })] || {};
+    }
+
+    getProdutoBySlug(slug){
+        const pages = this.getState().data.produtos;
         return pages[Object.keys(pages).find((page, i) => {
             return pages[page].slug === slug;
         })] || {};

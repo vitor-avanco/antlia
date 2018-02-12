@@ -5,15 +5,17 @@ import Destaque from '../componentes/Destaque';
 
 
 class QuemSomos extends Component {
+    componentDidMount(){ 
+        window.scrollTo(0,0);
+    }
     render() {
     	let page = DataStore.getPageBySlug('quem-somos');
         return (
             <div className="pagina-institucional pagina-quem-somos">
                 <MetaTags>
 		            <title>{page.title.rendered}</title>
-		            <meta id="meta-description" name="description" content="Some description." />
+		            <meta id="meta-description" name="description" content="{page.acf.texto_de_introducao}" />
 		            <meta id="og-title" property="og:title" content={page.title.rendered} />
-		            <meta id="og-image" property="og:image" content="path/to/image.jpg" />
 	          	</MetaTags>
                 <div className="header-azul">
                     <div className="text-center">
@@ -22,7 +24,7 @@ class QuemSomos extends Component {
                 </div>
                 <div className="border-radius-top container">
                     <div className="row">
-                        <div className="col-sm-offset-2 col-sm-8 text-center text-introducao" dangerouslySetInnerHTML={{__html:page.acf.texto_de_introducao}}></div>
+                        <div className="offset-sm-1 col-sm-10 text-center text-introducao" dangerouslySetInnerHTML={{__html:page.acf.texto_de_introducao}}></div>
                     </div>
                 </div>
 

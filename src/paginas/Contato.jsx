@@ -71,15 +71,18 @@ class Mapa extends Component {
   }
 
 class Contato extends Component {
+    componentDidMount(){ 
+        window.scrollTo(0,0);
+    }
     render() {
-    	let page = DataStore.getPageBySlug('contato');
+        let page = DataStore.getPageBySlug('contato');
+        
         return (
             <div className="pagina-institucional pagina-contato">
                 <MetaTags>
 		            <title>{page.title.rendered}</title>
-		            <meta id="meta-description" name="description" content="Some description." />
+		            <meta id="meta-description" name="description" content="Entre em contato conosco!" />
 		            <meta id="og-title" property="og:title" content={page.title.rendered} />
-		            <meta id="og-image" property="og:image" content="path/to/image.jpg" />
 	          	</MetaTags>
                 <div className="header-azul header-mapa">
                     <Mapa />

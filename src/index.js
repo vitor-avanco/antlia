@@ -12,7 +12,7 @@ import QuemSomos from './paginas/QuemSomos';
 import Contato from './paginas/Contato';
 
 import ProdutoServico from './paginas/ProdutoServico';
-import Produto from './paginas/Contato';
+import Produto from './paginas/Produto';
 import Servico from './paginas/Servico';
 
 import Vagas from './paginas/Vagas';

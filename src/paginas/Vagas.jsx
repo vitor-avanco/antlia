@@ -10,9 +10,10 @@ class ListaVagas extends Component {
 
     constructor() {
         super();    
-        this.state = {listaVagas : []};    
+        this.state = {listaVagas : []};
     }
 
+   
       
     componentDidMount(){  
         $.ajax({
@@ -96,6 +97,7 @@ class ListaVagas extends Component {
     render(){
         return (
              <div className="lista-de-vagas">
+               
                 <div className="container">
                     {
                         this.state.listaVagas.map(function(item,key){
@@ -120,16 +122,47 @@ class ListaVagas extends Component {
 
 
 class Vagas extends Component {
+    constructor() {
+        super();
+        this.handleSubmit = this.handleSubmit.bind(this);    
+    }
+    componentDidMount(){ 
+        window.scrollTo(0,0);
+    }
+    handleSubmit(event){        
+        event.preventDefault();
+        
+        const form = event.target;
+        const data = new FormData(form);
+        $('.botao-candidatar').addClass('carregando');
+        fetch('http://server.bioage.com.br/app/wordpress/envia-cv.php', {
+            method: 'POST',
+            body: data,
+            cache: false,
+            contentType: false,
+            processData: false
+
+          }).then(function(retorno) {
+            $('.botao-candidatar').removeClass('carregando');
+            alert("Inscrição realizada com sucesso. Boa sorte!");
+            $('.faixa-form').animate({
+                'bottom' : '-100%'
+            },500)
+            $('.formulario-vaga').fadeOut();
+            $('#list').html("");
+            $('.formulario-vaga input').val("");
+          });;
+    }
+
     render() {
     	let page = DataStore.getPageBySlug('vagas');
         return (
             <div>
-            	<MetaTags>
-		            <title>{page.title.rendered}</title>
-		            <meta id="meta-description" name="description" content="Some description." />
-		            <meta id="og-title" property="og:title" content={page.title.rendered} />
-		            <meta id="og-image" property="og:image" content="path/to/image.jpg" />
-	          	</MetaTags>
+            	 <MetaTags>
+                    <title>{page.title.rendered}</title>
+                    <meta id="meta-description" name="description" content={page.content.rendered} />
+                    <meta id="og-title" property="og:title" content={page.title.rendered} />
+                </MetaTags>
                 <div className="pagina-institucional pagina-vagas">
                     <div className="header-azul">
                         <div className="text-center">
@@ -138,7 +171,7 @@ class Vagas extends Component {
                     </div>
                     <div className="border-radius-top container">
                         <div className="row">
-                            <div className="col-sm-offset-2 col-sm-8 text-center text-introducao" dangerouslySetInnerHTML={{__html:page.content.rendered}}></div>
+                            <div className="offset-sm-1 col-sm-10 text-center text-introducao" dangerouslySetInnerHTML={{__html:page.content.rendered}}></div>
                         </div>
                     </div>
                     <ListaVagas/>
@@ -156,7 +189,7 @@ class Vagas extends Component {
                 <div className="formulario-vaga">
                     <div className="faixa-form">
                         <div className="container"> 
-                            <form className="formulario">
+                        <form onSubmit={this.handleSubmit} className="formulario"  encType="multipart/form-data" >
                                 <div className="fechar">X</div>
                                 <h3>
                                     Envie seu currículo para a vaga: <span className="nome-vaga">Vaga de Teste</span>
@@ -167,21 +200,21 @@ class Vagas extends Component {
                                             <div className="col-sm-12">
                                                 <div className="row">
                                                     <div className="col-sm-6">
-                                                        <input type="hidden" name="vaga" className="nome-da-vaga"  />
-                                                        <input type="text" name="nome" placeholder="Digite seu nome" className="form-input" required />   
+                                                        <input type="hidden" name="vaga" className="nome-da-vaga" required  />
+                                                        <input type="text" name="nome" placeholder="Digite seu nome" className="form-input"  required="required" />   
                                                     </div>
                                                     <div className="col-sm-6">
-                                                        <input type="email" name="email" placeholder="Digite seu e-mail" className="form-input" required />
+                                                        <input type="email" name="email" placeholder="Digite seu e-mail" className="form-input" required/>
                                                     </div> 
                                                 </div>
                                             </div>
                                             <div className="col-sm-12">
                                                 <div className="row">
                                                     <div className="col-sm-6">
-                                                        <input type="text" name="celular" placeholder="Digite seu celular" className="form-input mascara-celular" required />   
+                                                        <input type="text" name="celular" placeholder="Digite seu celular" className="form-input mascara-celular"  required/>   
                                                     </div>
                                                     <div className="col-sm-6">
-                                                        <input type="text" name="pretensao" placeholder="Pretensão salarial" className="form-input" required />
+                                                        <input type="text" name="pretensao" placeholder="Pretensão salarial" className="form-input" required/>
                                                     </div> 
                                                 </div>
                                             </div>
@@ -202,11 +235,11 @@ class Vagas extends Component {
                                         <output id="list">
                                             Nenhum arquivo selecionado
                                         </output>
-                                        <input id="files" className="cv" name="files" type="file" required/>
+                                        <input id="files" className="cv" name="files" type="file"/>
                                     </div>
                                     </div> 
                                     <div className="col-sm-12 text-center">
-                                        <input type="submit" value="Quero me candidatar" className="botao-candidatar"  />  
+                                        <button className="botao-candidatar">Quero me candidatar</button>  
                                     </div>
                                 </div> 
                             </form>
