@@ -15,7 +15,7 @@
   display: block;
   width: 96px;
   height: 84px;
-  background-image: url("../img/logotipo.svg");
+  background-image: url("../img/logotipo.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -111,9 +111,9 @@ header {
     background-repeat: no-repeat;
     color: transparent !important; }
     .icones-social li a.linkedin {
-      background-image: url("../img/linkedin.svg"); }
+      background-image: url("../img/linkedin.png"); }
     .icones-social li a.facebook {
-      background-image: url("../img/facebook.svg"); }
+      background-image: url("../img/facebook.png"); }
 
 footer {
   border-top: 1px solid #f1f1f1;

@@ -28,7 +28,7 @@ $mail->Password = 'eDRvano1cm1ybWQw';
 //Set who the message is to be sent from
 $mail->setFrom('site@antlia.com.br', 'Formulario de Produto');
 //Set who the message is to be sent to
-$mail->addAddress('vitor.avanco@hotmail.com', 'Vitor Avanco');
+$mail->addAddress('antlia@antlia.com.br', 'Vitor Avanco');
 //Set the subject line
 $mail->Subject = 'Formulario de Contato do Site';
 //Read an HTML message body from an external file, convert referenced images to embedded,
