@@ -17,7 +17,7 @@ class ListaVagas extends Component {
       
     componentDidMount(){  
         $.ajax({
-            url:"http://server.bioage.com.br/app/wordpress/wp-json/wp/v2/vagas/",
+            url:"http://www.antlia.com.br/wordpress/wp-json/wp/v2/vagas/",
             dataType: 'json',
             success:function(resposta){    
               this.setState({listaVagas:resposta});

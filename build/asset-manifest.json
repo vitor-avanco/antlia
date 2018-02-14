@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.d6b7b1cb.css",
   "main.css.map": "static/css/main.d6b7b1cb.css.map",
-  "main.js": "static/js/main.a75e8404.js",
-  "main.js.map": "static/js/main.a75e8404.js.map",
+  "main.js": "static/js/main.48da6467.js",
+  "main.js.map": "static/js/main.48da6467.js.map",
   "static\\media\\ProximaNova-Semibold.ttf": "static/media/ProximaNova-Semibold.61ad5984.ttf",
   "static\\media\\ProximaNova-Semibold.woff": "static/media/ProximaNova-Semibold.fa510f0c.woff",
   "static\\media\\ProximaNova-Semibold.woff2": "static/media/ProximaNova-Semibold.30868fc5.woff2",
@@ -25,6 +25,5 @@
   "static\\media\\ProximaNovaT-Thin.woff": "static/media/ProximaNovaT-Thin.6261e8b4.woff",
   "static\\media\\ProximaNovaT-Thin.woff2": "static/media/ProximaNovaT-Thin.9fc37a54.woff2",
   "static\\media\\arrow-left.png": "static/media/arrow-left.73376cd6.png",
-  "static\\media\\loading-branco.svg": "static/media/loading-branco.e75d52ee.svg",
-  "static\\media\\menu.svg": "static/media/menu.30e576d6.svg"
+  "static\\media\\loading-branco.svg": "static/media/loading-branco.e75d52ee.svg"
 }

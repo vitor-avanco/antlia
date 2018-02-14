@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import DataStore from '../flux/stores/DataStore.js'
 import {Link} from 'react-router-dom';
 import Social from '../componentes/Social';
-import MenuIcone from "../menu.svg";
+import MenuIcone from "../menu.png";
 import $ from "jquery"; 
 
 

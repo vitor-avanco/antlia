@@ -16,7 +16,7 @@ class Servicos extends Component {
     componentDidMount(){ 
         window.scrollTo(0,0);
         $.ajax({
-            url:"http://server.bioage.com.br/app/wordpress/wp-json/wp/v2/servicos/",
+            url:"http://www.antlia.com.br/wordpress/wp-json/wp/v2/servicos/",
             dataType: 'json',
             success:function(resposta){    
               this.setState({listaServicos:resposta});
