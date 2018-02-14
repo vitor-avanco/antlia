@@ -135,7 +135,7 @@ class Vagas extends Component {
         const form = event.target;
         const data = new FormData(form);
         $('.botao-candidatar').addClass('carregando');
-        fetch('http://server.bioage.com.br/app/wordpress/envia-cv.php', {
+        fetch('http://www.antlia.com.br/wordpress/envia-cv/envia-cv.php', {
             method: 'POST',
             body: data,
             cache: false,

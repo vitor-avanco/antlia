@@ -4,7 +4,7 @@ import alt   from '../alt/alt.js';
 class DataActions {
 
     constructor() {
-        const appUrl = 'http://server.bioage.com.br/app/wordpress'; // Wordpress installation url
+        const appUrl = 'http://www.antlia.com.br/wordpress'; // Wordpress installation url
 
         this.pagesEndPoint = appUrl + '/wp-json/wp/v2/pages';
         this.postsEndPoint = appUrl + '/wp-json/wp/v2/posts';

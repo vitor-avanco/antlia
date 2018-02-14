@@ -813,7 +813,6 @@ footer {
   .pagina-de-servico .RRT__container .RRT__tabs.RRT__accordion > div:last-child {
     margin-bottom: 20px; }
   .pagina-de-servico .RRT__container .RRT__tabs.RRT__accordion .RRT__tab {
-    vertical-align: top;
     display: block;
     padding: 5px 18px;
     border: 1px solid #DDDDDD;

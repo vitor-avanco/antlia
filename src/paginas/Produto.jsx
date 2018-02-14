@@ -14,13 +14,13 @@ class FormularioContato extends Component{
         const data = new FormData(form);
         $('.botao-enviar').addClass('carregando');
         $('.interesse').val(document.getElementsByTagName("title")[0].innerHTML);
-        fetch('http://server.bioage.com.br/app/wordpress/envia-contato.php', {
+        fetch('http://www.antlia.com.br/wordpress/envia-cv/envia-contato.php', {
             method: 'POST',
             body: data,
             cache: false,
             contentType: false,
             processData: false
-
+            
           }).then(function(retorno) {
             $('.botao-enviar').removeClass('carregando');
             alert("Mensagem enviada com sucesso");
