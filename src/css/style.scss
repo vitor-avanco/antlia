@@ -942,7 +942,7 @@ display: table;}
     height: 30px;
     background-size: 18px;
     background-color: #f1f1f1;
-	background-image: url('../img/arrow-left.png');
+	background-image: url('../img/arrow-left.png') !important;
 	overflow: hidden;
 	text-indent: -999px;
 	background-size: 18px;
@@ -965,7 +965,7 @@ display: table;}
     height: 30px;
     background-size: 18px;
     background-color: #f1f1f1;
-	background-image: url('../img/arrow-right.png');
+	background-image: url('../img/arrow-right.png') !important;
 	overflow: hidden;
 	text-indent: -999px;
 	background-size: 18px;
@@ -1161,4 +1161,32 @@ display: table;}
 			}
 		}
 	}
+}
+
+.owl-theme .owl-nav .owl-next:after {
+    content: ">";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #666;
+	font-weight: 600px;
+    z-index: 999999;
+    height: 30px;
+    width: 30px;
+    text-indent: 0px;
+    font-size: 21px;
+}
+
+.owl-theme .owl-nav .owl-prev:after {
+    content: "<";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #666;
+	font-weight: 600px;
+    z-index: 999999;
+    height: 30px;
+    width: 30px;
+    text-indent: 0px;
+    font-size: 21px;
 }
