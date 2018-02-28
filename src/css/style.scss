@@ -109,6 +109,13 @@ $media-queries: true;
 		display: none !important;
 	}
 }
+@mixin transition($args...) {
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	-ms-transition: $args;
+	-o-transition: $args;
+	transition: $args;
+  }
 
 
 *{
@@ -124,6 +131,7 @@ $media-queries: true;
 	background-repeat: no-repeat;
 	overflow: hidden;
 	text-indent: -999px;
+	@include transition(300ms);
 	@include bp(iphone){
 		height: 50px;
 	}
@@ -149,11 +157,12 @@ header{
 	z-index: 99;
 	top: 0px;
 	left: 0px;
-
+	@include transition(300ms);
 	.menu-topo{
 		text-align: right;
 		margin-top: 30px;
 		margin-bottom: 0px;
+		@include transition(300ms);
 		li{
 			display: inline-block;
 			vertical-align: top;
@@ -189,6 +198,18 @@ header{
 			}
 		}
 	}	
+
+	&.header-min{
+		@include transition(300ms);
+		.logotipo{
+			height: 50px;
+			@include transition(300ms);
+		}
+		.menu-topo{
+			margin-top: 15px;
+			@include transition(300ms);
+		}
+	}
 }
 .banner-principal{
 	height: calc(100vh - 104px);
@@ -196,16 +217,28 @@ header{
 	background-position: center;
 	display: table;
 	width: 100%;
+	background: $azulEscuro;
+	overflow: hidden;
+	position: relative;
+
+	@include bp(iphone){
+		background-image: url(http://www.antlia.com.br/wordpress/wp-content/uploads/2018/02/slider-bg.jpg);
+		background-size: auto 100%;
+    	background-position: center;
+	}
 	> div{
 		display: table-cell;
 		vertical-align: middle;
+		z-index: 2;
 		h2{
 			color: #FFFFFF;
 			font-family: "Proxima Nova Alt Cn Lt";
-			font-size: 36px;
-			max-width: 500px;
+			font-size: 40px;
+			max-width: 700px;
 			margin-left: auto;
 			margin-right: auto;
+			z-index: 3;
+			position: relative;
 			@include bp(iphone){
 				padding: 0 10px;
 			}
@@ -236,6 +269,21 @@ header{
 				background-image: url('../img/facebook.png');
 			}
 		}
+	}
+}
+
+#background-video{
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	display: table;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 0.2;
+	z-index: 1;
+	@include bp(iphone){
+		display: none;
 	}
 }
 

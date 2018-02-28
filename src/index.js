@@ -76,6 +76,7 @@ class AppInitializer {
                 <Router>
                     <div>
                         <Header />
+                        <div id="site-content">
                         <Switch>
                             <Route path="/" component={ Home } exact />
 
@@ -84,6 +85,7 @@ class AppInitializer {
                             {this.buildRoutesProdutos(response)}
                             <Route render={() => { return <Redirect to="/" /> }} />
                         </Switch> 
+                        </div>
                         <Footer />
                     </div>
                 </Router>

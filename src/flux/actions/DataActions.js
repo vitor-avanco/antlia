@@ -39,8 +39,7 @@ class DataActions {
     // Method for getting Posts data
     getPosts(pages, cb){
 
-        this.api(this.postsEndPoint).then((response)=>{
-            const posts     = response
+        
             
             this.api(this.produtosEndPoint).then((response)=>{
                 const produtos     = response
@@ -50,15 +49,13 @@ class DataActions {
                     
                     this.api(this.vagasEndPoint).then((response)=>{
                         const vagas     = response
-                        const payload   = { pages, posts, produtos, servicos, vagas };
+                        const payload   = { pages, produtos, servicos, vagas };
 
                         this.getSuccess(payload); // Pass returned data to the store
                         cb(payload); // This callback will be used for dynamic rout building
                     });
                 });
-
             });
-        });
         return true;
     }
 

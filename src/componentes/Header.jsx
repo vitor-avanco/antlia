@@ -6,14 +6,30 @@ import MenuIcone from "../menu.png";
 import $ from "jquery"; 
 
 
-
-
-class Header extends Component {  
+class Header extends Component {
+    
     componentDidMount(){
         $('body').on("click", ".container-menu-mobile .menu ul li a", function(){
             $(".container-menu-mobile .menu").css("margin-right", "" );
             $(".container-menu-mobile").fadeOut();
-        })
+        });
+
+        $(function() {
+            var header = $("header"); 
+            var body = $('body');
+
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+                if (scroll >= 100) {
+                    header.addClass('header-min');
+                    body.addClass('body-header-min');
+                } else {
+                    header.removeClass("header-min");
+                    body.removeClass('body-header-min');
+                }
+            });
+        });
+
     } 
     abreMenu(){
         $(".container-menu-mobile").fadeIn();

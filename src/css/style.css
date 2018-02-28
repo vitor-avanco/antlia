@@ -20,7 +20,12 @@
   background-size: contain;
   background-repeat: no-repeat;
   overflow: hidden;
-  text-indent: -999px; }
+  text-indent: -999px;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms; }
   @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
     .logotipo {
       height: 50px; } }
@@ -44,11 +49,21 @@ header {
   width: 100%;
   z-index: 99;
   top: 0px;
-  left: 0px; }
+  left: 0px;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms; }
   header .menu-topo {
     text-align: right;
     margin-top: 30px;
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms; }
     header .menu-topo li {
       display: inline-block;
       vertical-align: top;
@@ -75,23 +90,54 @@ header {
       display: block; }
       header .menu-mobile img {
         height: 50px; } }
+  header.header-min {
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms; }
+    header.header-min .logotipo {
+      height: 50px;
+      -webkit-transition: 300ms;
+      -moz-transition: 300ms;
+      -ms-transition: 300ms;
+      -o-transition: 300ms;
+      transition: 300ms; }
+    header.header-min .menu-topo {
+      margin-top: 15px;
+      -webkit-transition: 300ms;
+      -moz-transition: 300ms;
+      -ms-transition: 300ms;
+      -o-transition: 300ms;
+      transition: 300ms; }
 
 .banner-principal {
   height: calc(100vh - 104px);
   background-size: cover;
   background-position: center;
   display: table;
-  width: 100%; }
+  width: 100%;
+  background: #014281;
+  overflow: hidden;
+  position: relative; }
+  @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+    .banner-principal {
+      background-image: url(http://www.antlia.com.br/wordpress/wp-content/uploads/2018/02/slider-bg.jpg);
+      background-size: auto 100%;
+      background-position: center; } }
   .banner-principal > div {
     display: table-cell;
-    vertical-align: middle; }
+    vertical-align: middle;
+    z-index: 2; }
     .banner-principal > div h2 {
       color: #FFFFFF;
       font-family: "Proxima Nova Alt Cn Lt";
-      font-size: 36px;
-      max-width: 500px;
+      font-size: 40px;
+      max-width: 700px;
       margin-left: auto;
-      margin-right: auto; }
+      margin-right: auto;
+      z-index: 3;
+      position: relative; }
       @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
         .banner-principal > div h2 {
           padding: 0 10px; } }
@@ -114,6 +160,20 @@ header {
       background-image: url("../img/linkedin.png"); }
     .icones-social li a.facebook {
       background-image: url("../img/facebook.png"); }
+
+#background-video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: table;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0.2;
+  z-index: 1; }
+  @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+    #background-video {
+      display: none; } }
 
 footer {
   border-top: 1px solid #f1f1f1;
