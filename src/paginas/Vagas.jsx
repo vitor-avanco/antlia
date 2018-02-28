@@ -101,9 +101,10 @@ class ListaVagas extends Component {
                 <div className="container">
                     {
                         this.state.listaVagas.map(function(item,key){
+                            var tituloVaga = item.title.rendered;
                             return(
                                 <div className="item" key={key}>
-                                        <h3>{item.title.rendered}</h3>
+                                        <h3 dangerouslySetInnerHTML={{__html:item.title.rendered}}></h3>
                                         <div className="descricao-vaga" dangerouslySetInnerHTML={{__html:item.acf.descricao_da_vaga}}></div>
                                         <span className='quero-candidatar' data-vaga={item.title.rendered}>Quero me candidatar</span>
                                 </div>
