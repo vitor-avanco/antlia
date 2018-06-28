@@ -3,7 +3,6 @@ import DataStore from '../flux/stores/DataStore';
 import MetaTags from 'react-meta-tags';
 import Destaque from '../componentes/Destaque';
 import Typist from 'react-typist';
-import video from '../video/video.mp4';
 class Linguagens extends Component{
 	render() {
 		let page = DataStore.getPageBySlug('home');
@@ -92,7 +91,7 @@ class BannerPrincipal extends Component{
 		return(
 			<div className="banner-principal">
 				<video id="background-video" loop autoPlay>
-					<source src={video} type="video/mp4" />
+					<source src="//antlia.byethost12.com/video.mp4" type="video/mp4" />
 				</video>
 				<div>
 					<Typist>
