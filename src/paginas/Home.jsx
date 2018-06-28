@@ -91,7 +91,7 @@ class BannerPrincipal extends Component{
 		return(
 			<div className="banner-principal">
 				<video id="background-video" loop autoPlay>
-					<source src="//antlia.byethost12.com/video.mp4" type="video/mp4" />
+					<source src="https://doc-10-6g-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/8uv7v3uukna1q2ip78ug2udgp2288fgq/1530144000000/07319852530808863465/*/1_pyBi0fesXLBBVQv_CRxAfomCqiQRM7L" type="video/mp4" />
 				</video>
 				<div>
 					<Typist>
