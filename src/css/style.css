@@ -11,6 +11,9 @@
 * {
   font-family: "Proxima Nova Alt Rg"; }
 
+.hide {
+  display: none !important; }
+
 .logotipo {
   display: block;
   width: 96px;
@@ -222,7 +225,7 @@ footer {
     width: 290px;
     height: 62px;
     background-image: url("../img/certificacoes.jpg");
-    background-position: center;
+    background-position: center right;
     background-size: contain;
     background-repeat: no-repeat; }
     @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
@@ -993,7 +996,8 @@ footer {
   height: 30px;
   width: 30px;
   text-indent: 0px;
-  font-size: 21px; }
+  font-size: 21px;
+  display: none; }
 
 .owl-theme .owl-nav .owl-prev:after {
   content: "<";
@@ -1006,4 +1010,12 @@ footer {
   height: 30px;
   width: 30px;
   text-indent: 0px;
-  font-size: 21px; }
+  font-size: 21px;
+  display: none; }
+
+.bg-cinza.lista-servicos h2 {
+  margin-top: 10px;
+  text-align: center; }
+
+.bg-cinza.lista-servicos .text-center p {
+  margin-bottom: 45px; }

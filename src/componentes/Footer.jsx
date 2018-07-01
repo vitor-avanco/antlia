@@ -42,7 +42,7 @@ class Footer extends Component {
                             </div>
                         </div>
                         <div className="col-sm-6 text-right">
-                            <span className="certificacoes"></span>
+                            <a href="https://partner.microsoft.com/pt-BR/" rel="noopener" target="_blank" className="certificacoes"></a>
                         </div>
                     </div>
                 </div>

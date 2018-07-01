@@ -34,7 +34,7 @@ class ProdutoServico extends Component {
                         <div className="offset-sm-1 col-sm-10 text-center text-introducao" dangerouslySetInnerHTML={{__html:page.acf.texto_de_introducao}}></div>
                     </div>
                 </div>
-                <div className="bg-cinza">
+                <div className={"bg-cinza " + (page.acf.mostrar_secao_de_produtos ? 'show' : 'hide')}>
                     <div className="container">
                         <div className="row">
                             <div className="col-sm-6" dangerouslySetInnerHTML={{__html:page.acf.conheca_nossos_produtos}}></div>
@@ -44,7 +44,8 @@ class ProdutoServico extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="container">
+                <div className={(page.acf.mostrar_secao_de_produtos ? '' : 'bg-cinza lista-servicos')}>
+                    <div className="container">
                         <div className="row">
                             <div className="col-sm-12 text-center" dangerouslySetInnerHTML={{__html:page.acf.conheca_nossos_servicos}}></div>
                             <div className="col-sm-12">
@@ -52,6 +53,7 @@ class ProdutoServico extends Component {
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
         );
     }

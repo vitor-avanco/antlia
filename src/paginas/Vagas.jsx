@@ -170,7 +170,7 @@ class Vagas extends Component {
                             <h1>{page.title.rendered}</h1>
                         </div>
                     </div>
-                    <div className="border-radius-top container">
+                    <div className="border-radius-top container" style={{ minHeight: '120px'}}>
                         <div className="row">
                             <div className="offset-sm-1 col-sm-10 text-center text-introducao" dangerouslySetInnerHTML={{__html:page.content.rendered}}></div>
                         </div>
